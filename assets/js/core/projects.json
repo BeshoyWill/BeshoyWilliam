@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Yummy",
+    "description": "The \"Yummy\" website by Beshoy Will offers an easy-to-use interface for exploring meals, with search options by categories, areas, and ingredients. It features a contact section for user interaction. The design is simple and intuitive for a smooth user experience.",
+    "link": "https://beshoywill.github.io/Yummy/",
+    "image": "assets/images/projects-logo/yummy.png",
+    "backgroundImage": "assets/images/projects/yummy.png"
+  },
+  {
+    "title": "FreeToGame",
+    "description": "The \"FreeToGame\" website by Beshoy Will is a platform for accessing free games, featuring a login system for user registration. The design focuses on simplicity and user-friendliness, requiring users to sign in or create a new account to access full features.",
+    "link": "https://beshoywill.github.io/FreeToGame/",
+    "image": "assets/images/projects-logo/freetogame.png"
+  },
+  {
+    "title": "FreshCart",
+    "description": "The \"FreeToGame\" website by Beshoy Will is a platform for accessing free games, featuring a login system for user registration. The design focuses on simplicity and user-friendliness, requiring users to sign in or create a new account to access full features.",
+    "link": "https://beshoywill.github.io/FreshCart/",
+    "image": "assets/images/projects-logo/freetogame.png"
+  }
+]

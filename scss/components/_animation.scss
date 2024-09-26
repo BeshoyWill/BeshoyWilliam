@@ -1,0 +1,117 @@
+@use '../custom' as *;
+
+
+@keyframes move-menu {
+    from {
+       transform: rotateZ(-90deg) scale(0.1);
+    }
+    to {
+       transform: rotateZ(0) scale(1);
+       opacity: 1;
+    }
+ }
+
+ 
+ @keyframes cursor {
+   to {
+     border-left: 2px solid var(--main-color);
+   }
+ }
+ 
+ @keyframes words {
+   0%,
+   20% {
+     content: "Frontend Developer";
+   }
+ 
+   21%,
+   40% {
+     content: "Web Designer";
+   }
+ 
+   41%,
+   60% {
+     content: "UI / UX Designer";
+   }
+ 
+   61%,
+   80% {
+     content: "Backend Developer";
+   }
+ 
+   81%,
+   100% {
+     content: "Software Tester";
+   }
+ }
+ 
+ @keyframes typing {
+   10%,
+   15%,
+   30%,
+   35%,
+   50%,
+   55%,
+   70%,
+   75%,
+   90%,
+   95% {
+     width: 0;
+   }
+ 
+   5%,
+   20%,
+   25%,
+   40%,
+   45%,
+   60%,
+   65%,
+   80%,
+   85%,
+   100% {
+     width: calc(100% + 8px);
+   }
+ }
+ 
+
+//  ring
+
+  
+@keyframes move {
+   0% {
+     box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
+     filter: hue-rotate(0deg);
+   }
+ 
+   20% {
+     box-shadow: 0 0 60px var(--main-color), inset 0 0 60px var(--main-color);
+   }
+ 
+   40% {
+     box-shadow: 0 0 40px var(--main-color), inset 0 0 40px var(--main-color);
+   }
+ 
+   60% {
+     box-shadow: 0 0 80px var(--main-color), inset 0 0 80px var(--main-color);
+   }
+ 
+   80% {
+     box-shadow: 0 0 100px var(--main-color), inset 0 0 100px var(--main-color);
+   }
+ 
+   100% {
+     box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
+   }
+ }
+ 
+//  Footer Wave
+
+@keyframes move-forever {
+   0% {
+     transform: translate3d(-90px, 0, 0);
+   }
+   100% {
+     transform: translate3d(85px, 0, 0);
+   }
+ }
+ 

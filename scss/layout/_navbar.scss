@@ -1,0 +1,98 @@
+@use '../custom' as *;
+
+/* &================> Header Section <================& */
+
+.header .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2% 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.625rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  
+    span {
+      text-shadow: 0 0 60px var(--main-color);
+      color: var(--main-color);
+    }
+  }
+  
+  .navbar-all {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+
+    .navlinks a {
+      font-size: 1.7rem;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: 0.3s ease;
+      letter-spacing: 1px;
+      transform-origin: right top;
+      opacity: 0;
+      animation: move-menu 0.8s cubic-bezier(0.42, 0.97, 0.52, 1.49) forwards;
+    
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+         animation-delay: 0.2s * $i;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: 1.6rem;
+      }
+    
+      &:hover, &.active {
+        color: var(--main-color);
+        border-bottom: 3px solid var(--main-color);
+      }
+    
+      &:is(.active, :hover) {
+        color: var(--main-color);
+        letter-spacing: 0.1875rem;
+        font-weight: 700;
+      }
+    }
+
+    .smart-features {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 2.75rem;
+    }
+
+    .smart-features > * {
+      margin-left: 0.25rem;
+    }
+
+  }
+  
+  #nav-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4rem;
+    right: 0.75rem;
+    display: none;
+  }
+  
+  

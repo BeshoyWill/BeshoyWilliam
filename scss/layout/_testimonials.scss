@@ -1,0 +1,106 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+/* &================> Testimonials Section <================& */
+
+.testimonials {
+  .testimonials-box {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 0 25px var(--main-color);
+    }
+  
+    .testimonials-item {
+      @include flex(column, center, center, null);
+      max-height: 500px;
+      max-width: 350px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 3px solid rgba(238, 238, 238, 0.2);
+      border-radius: 2rem;
+      padding: 30px 60px;
+      cursor: pointer;
+      text-align: center;
+      gap: 1.5rem;
+      color: var(--white-color);
+    
+      &:hover {
+        border: 3px sollid var(--main-color);
+        box-shadow: 0 0 20px var(--main-color);
+        transform: scale(1.05);
+      }
+    
+      h2 {
+        font-size: 2.8rem;
+      }
+    
+      p {
+        font-size: 1.3rem;
+      }
+  
+      #star {
+        color: gold;
+      }
+    }
+  }
+}
+  
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.owl-nav {
+  position: absolute;
+  left: -4%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-next i, .owl-prev i {
+  font-size: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.owl-next i:hover, .owl-prev i:hover  {
+  background: var(--main-color);
+  color: var(--black-color);
+}
+
+
+  #owl-demo .item{
+    margin: 3px;
+    overflow: hidden;
+    width: 100%;
+  }
+  #owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }

@@ -1,0 +1,97 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+/* &================> About Me Section <================& */
+
+.about {
+    padding: 4rem 12rem;
+    
+    
+    .about-me {
+      @include flex(row, center, null, 15rem);
+      position: relative;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      
+  
+      .about-img {
+        width: 40%;
+        height: 10rem;
+      
+        img {
+          left: -15%;
+          width: 38vw;
+          position: relative;
+          transform: translateY(-15%);
+          -webkit-transform: translateY(-15%);
+          -moz-transform: translateY(-15%);
+          -ms-transform: translateY(-15%);
+          -o-transform: translateY(-15%);
+        }
+      }
+
+      
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+      
+        h4 {
+          font-size: 3.5rem;
+          color: var(--main-color);
+          margin-inline: 0;
+          margin-block: 1rem;
+        }
+      
+        h3 {
+          font-size: 4.5rem;
+          color: var(--white-color);
+          padding: 0;
+          margin-bottom: 1rem;
+        }
+      
+        p {
+          font-size: 1.5rem;
+          color: var(--gray-color);
+          padding-bottom: 1rem;
+        }
+
+        .btn-group {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+  
+      .experience-info {
+        padding-block: 4rem;
+      
+        div {
+          p {
+            margin: 0;
+            padding: 0;
+      
+            &:nth-child(odd) {
+              font-size: 2rem;
+              color: var(--gray-color);
+              font-weight: 700;
+            }
+      
+            &:nth-child(even) {
+              font-size: 1.5rem;
+              color: var(--main-color);
+              font-weight: 600;
+            }
+          }
+      
+          padding-block: 1rem;
+        }
+      }
+
+    }
+}

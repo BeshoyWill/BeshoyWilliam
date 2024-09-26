@@ -1,0 +1,82 @@
+@use '../custom' as *;
+
+$u:             8px;
+$motion-out:    cubic-bezier(0.5, 1, 0.89, 1);
+$motion-in:     cubic-bezier(0.11, 0, 0.5, 0);
+$m:             0.15s;
+
+.menuicon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  width: $u*2.5;
+  height: $u*2.5;
+  cursor: pointer;
+  
+  &.active {
+    .menuicon__dot {
+      opacity: 0;
+    }
+    .menuicon__dot:nth-child(2) {
+      opacity: 1;
+      height: $u*2.5;
+      transform: rotate(45deg);
+    }
+    .menuicon__dot:nth-child(4) {
+      opacity: 1;
+      width: $u*2.5;
+      transform: rotate(45deg);
+    }
+  }
+  &__wrapper {
+    width: $u*4;
+    height: $u*4;
+    flex: 0 0 $u*4;
+    min-width: $u*4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__dot {
+    width: $u*0.5;
+    height: $u*0.5;
+    background: var(--main-color);
+    // transition: all $motion-in $m*3;
+    transition: all $motion-out $m*2, transform $m*2 $motion-out $m*2;
+    border-radius: $u;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:nth-child(2) {
+      left: ($u*0.5 + $u*0.5);
+    }
+    &:nth-child(3) {
+      left: ($u*0.5 + $u*0.5 + $u*0.5 + $u*0.5);
+    }
+    &:nth-child(4) {
+      top: ($u*0.5 + $u*0.5);
+    }
+    &:nth-child(5) {
+      left: ($u*0.5 + $u*0.5);
+      top: ($u*0.5 + $u*0.5);
+    }
+    &:nth-child(6) {
+      left: ($u*0.5 + $u*0.5 + $u*0.5 + $u*0.5);
+      top: ($u*0.5 + $u*0.5);
+    }
+    &:nth-child(7) {
+      top: ($u*0.5 + $u*0.5 + $u*0.5 + $u*0.5);
+    }
+    &:nth-child(8) {
+      left: ($u*0.5 + $u*0.5);
+      top: ($u*0.5 + $u*0.5 + $u*0.5 + $u*0.5);
+    }
+    &:nth-child(9) {
+      left: ($u*0.5 + $u*0.5 + $u*0.5 + $u*0.5);
+      top: ($u*0.5 + $u*0.5 + $u*0.5 + $u*0.5);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use '../custom' as *;
+
+/*  &================> Nav Bullets <================& */
+.nav-bullets {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 888;
+    display: block;
+  
+    .bullet {
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin: 10px 0;
+      border-radius: 50%;
+      border: 2px solid var(--main-color);
+      position: relative;
+      transition: var(--transition);
+  
+      &:is(:hover, .active) {
+        transform: scale(1.5);
+        background-color: var(--main-color);
+      }
+  
+      &:hover .tooltip {
+        display: block;
+      }
+  
+      .tooltip {
+        position: absolute;
+        right: 220%;
+        top: 50%;
+        white-space: nowrap;
+        padding: 2px 8px;
+        border-radius: 3px;
+        color: var(--black-color);
+        background-color: var(--main-color);
+        font-size: 0.8rem;
+        transform: translateY(-50%);
+        display: none;
+        pointer-events: none;
+        transition: var(--transition);
+        font-weight: 800;
+  
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          margin-right: -11px;
+          margin-top: -6px;
+          border: 6px solid;
+          border-color: transparent transparent transparent var(--main-color);
+        }
+      }
+    }
+  }
+  

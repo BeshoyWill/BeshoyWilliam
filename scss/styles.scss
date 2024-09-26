@@ -1,0 +1,33 @@
+@use 'variables';
+@use 'custom';
+
+
+// IMPORT THE LAYOUT
+@use 'layout/navbar';
+@use 'layout/home';
+@use 'layout/about';
+@use 'layout/skills';
+@use 'layout/projects';
+@use 'layout/timeline';
+@use 'layout/services';
+@use 'layout/testimonials';
+@use 'layout/contact';
+@use 'layout/footer';
+
+
+// IMPORT THE COMPONENTS
+@use 'components/animation';
+@use 'components/bullets';
+@use 'components/toggle';
+@use 'components/nav-icon';
+@use 'components/languages';
+@use 'components/settings';
+@use 'components/mixins';
+@use 'components/typography';
+@use 'components/heading';
+@use 'components/ring';
+@use 'components/wave';
+@use 'components/morphing-background';
+@use 'components/skill-chart';
+@use 'components/buttons';
+@use 'components/media-screens';

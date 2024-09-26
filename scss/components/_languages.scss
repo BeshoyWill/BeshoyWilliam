@@ -1,0 +1,116 @@
+@use '../custom' as *;
+
+/* ?=============> language dropdown <============= */
+.dropdown button {
+  background-color: transparent;
+  min-width: 130px;
+  width: max-content;
+  height: 40px;
+  border-radius: 5px;
+  color: var(--white-color);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  justify-content: space-evenly;
+
+  img {
+    margin: 0 5px 0 0;
+    width: 28px;
+  }
+
+  &:hover {
+    background-color: var(--main-color);
+  }
+}
+
+.dropdown-content li img {
+  width: 28px;
+}
+
+.dropdown button, .dropdown-content li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: var(--white-color) transparent transparent transparent;
+  margin: 0 0 0 5px;
+}
+
+.dropdown button:focus {
+  cursor: pointer;
+  background-color: var(--main-color);
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+  background-color: transparent;
+}
+
+/* Style for the dropdown content */
+
+.dropdown-content {
+  min-width: 130px;
+  display: none;
+  position: absolute;
+  margin: 1px 0 0 0;
+  padding: 0;
+  background-color: var(--black-color);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+
+  li {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 12px 0;
+    text-decoration: none;
+    justify-content: end;
+    direction: rtl;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--black-color);
+
+    img {
+      margin: 0 20px 0px 20px;
+    }
+
+    &:hover {
+      background-color: var(--white-color);
+      cursor: pointer;
+      color: var(--black-color);
+      border-radius: 5px;
+    }
+
+    &:first-child {
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    &:last-child { 
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    }
+  }
+}
+
+/* Style for the dropdown content items */
+
+/* Style for the dropdown content items on hover */
+
+/* Show the dropdown content when the dropdown button is clicked */
+
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}

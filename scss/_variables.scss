@@ -1,0 +1,77 @@
+:root {
+    /* *=======> Colors <======= */
+    --bg-color:hsl(0, 0%, 3%);
+  
+    /* #080808 */
+    --second-bg-color:hsl(0, 0%, 8%);
+  
+    /* #131313 */
+    --text-color:var(--white-color);
+    --gray-color:hsl(0, 0%, 50%);
+  
+    /* #808080 */
+    --white-color:hsl(0, 0%, 100%);
+  
+    /* white */
+    --black-color:hsl(0, 0%, 0%);
+  
+    /* black */
+  
+    --main-color-hue:220;
+  
+    /* Hue for #0066ff */
+    --main-color:hsl(var(--main-color-hue), 100%, 50%);
+    --footage1-color:hsl(var(--main-color-hue), 100%, 50%);
+    --footage2-color:hsla(0, 0%, 0%, 0.31);
+    --footage3-color:hsla(var(--main-color-hue), 100%, 50%, 0.8);
+    --footage4-color:hsla(var(--main-color-hue), 100%, 50%, 0.4);
+  
+    /* *=======> Breakpoints <======= */
+    --container-xxl:1320px;
+    --container-xl:1140px;
+    --container-lg:960px;
+    --container-md:720px;
+    --container-sm:540px;
+    --container-xs:100%;
+    --container-fluid:100%;
+  
+    /* *=======> Animation Duration <======= */
+    --transition:all 0.3s linear;
+  
+    /* *=======> Filters <======= */
+    --hue-rotate:20deg;
+    --hue-filter:0%;
+
+    
+  
+  --size: 110vh;
+  --s: calc(var(--size) / 6);
+  --bor: calc(var(--size) / 50);
+  --boxShadow: calc(var(--size) / 12);
+  }
+  
+  /* Light Theme Colors */
+  
+  .light-theme {
+    --bg-color:hsl(0, 0%, 100%);
+  
+    /* white */
+    --second-bg-color:hsl(0, 0%, 95%);
+    --text-color:hsl(0, 0%, 3%);
+    --gray-color:hsl(0, 0%, 50%);
+    --white-color:hsl(0, 0%, 100%);
+  
+    /* white */
+    --black-color:hsl(0, 0%, 0%);
+  
+    /* black */
+    --main-color-hue:0;
+    --main-color:hsl(var(--main-color-hue), 0%, 50%);
+    --footage1-color:hsl(var(--main-color-hue), 0%, 50%);
+    --footage2-color:hsla(0, 0%, 0%, 0.31);
+    --footage3-color:hsla(var(--main-color-hue), 0%, 50%, 0.8);
+    --footage4-color:hsla(var(--main-color-hue), 0%, 50%, 0.4);
+    --hue-rotate:20deg;
+    --hue-filter:100%;
+  }
+  

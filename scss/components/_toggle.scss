@@ -1,0 +1,41 @@
+@use '../custom' as *;
+@use 'mixins' as *;
+
+
+$scale: 50px;
+
+input[type="checkbox"] {
+    display: none;
+}
+  
+.box {
+    @include toggle(row, left, center, $scale, $scale/2, #000);
+    position: relative;
+    border-radius: $scale / 4;
+    -webkit-border-radius: $scale / 4;
+    -moz-border-radius: $scale / 4;
+    -ms-border-radius: $scale / 4;
+    -o-border-radius: $scale / 4;
+    border: 2px solid var(--white-color);
+
+    cursor: pointer;
+    .ball {
+        @include toggle(column, center, null, $scale/2, $scale/2, white);
+        position: absolute;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border: 0.125rem solid black;
+        box-shadow: 0 0 0.25rem 0.3125rem rgb(0 0 0 / 50%);
+    }
+
+    .scenary {
+        @include toggle(row, space-between, null, 100%, null, null);
+        padding: 0.3125rem 0.625rem 0 0.625rem;
+        svg {
+            width: $scale/3;
+        }
+    }
+}

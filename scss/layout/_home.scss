@@ -1,0 +1,132 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+/* &================> Home Section <================& */
+
+.home {
+    @include flex(row, center, center, 15rem);
+    padding: 4.5rem 0;
+  
+    .home-content {
+      @include flex(column, center, baseline, null);
+      text-align: left;
+      margin-top: 3rem;
+      width: 50%;
+
+      h3 {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        font-size: 3.5rem;
+  
+  
+        &.text-animation {
+          font-size: 34px;
+          font-weight: 600;
+          min-width: 280px;
+        
+          span {
+            position: relative;
+        
+            &::before {
+              content: "Web Developmer";
+              color: var(--main-color);
+              animation: words 20s infinite;
+            }
+        
+            &::after {
+              content: "";
+              background-color: var(--bg-color);
+              position: absolute;
+              width: calc(100% + 8px);
+              height: 100%;
+              border-left: 3px solid var(--bg-color);
+              right: -8px;
+              animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+            }
+          }
+          
+        }
+      }
+    
+      h1 {
+        font-size: 6.5rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        line-height: 1;
+      }
+      
+      p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.8;
+      max-width: 1000px;
+      }
+    
+      p i {
+        color: var(--main-color);
+      }
+    }
+  
+    .home-img {
+      position: relative;
+      inset: 0;
+      top: 5rem;
+      @include box(32vw, 32vw);
+      border-radius: 50%;
+      background-color: var(--main-color);
+      box-shadow: 0 0 25px var(--main-color);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    
+      img {
+        position: absolute;
+        width: 18vw;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, 0) scale(2.4);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        object-fit: contain;
+        object-position: top;
+        -webkit-transform: translate(-50%, 0) scale(2.4);
+        -moz-transform: translate(-50%, 0) scale(2.4);
+        -ms-transform: translate(-50%, 0) scale(2.4);
+        -o-transform: translate(-50%, 0) scale(2.4);
+      }
+    
+      &:hover {
+        box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+      }
+    }
+  
+    .social-icons a {
+      @include flex(row, center, center, null);
+      @include box(4.5rem, 4.5rem);
+      display: inline-block;
+      background: transparent;
+      border: 2px solid var(--main-color);
+      font-size: 2.5rem;
+      border-radius: 50%;
+      color: var(--main-color);
+      transition: 0.3s ease-in-out;
+    
+      &:not(:first-child) {
+        margin: 3rem 0 3rem 3rem;
+      }
+    
+      &:hover {
+        color: var(--black-color);
+        transform: scale(1.3) translateY(-5px);
+        box-shadow: 0 0 25px var(--main-color);
+        background-color: var(--main-color);
+      }
+    
+      i {
+        @include centerPosition(relative);
+      }
+    }
+    
+}

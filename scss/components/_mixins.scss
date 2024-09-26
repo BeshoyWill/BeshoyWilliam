@@ -1,0 +1,71 @@
+
+/* ^=======> General <===== */ 
+
+@mixin flex($a, $b, $c, $d) { 
+  display: flex;
+  flex-direction: $a;
+  justify-content: $b;
+  align-items: $c;
+  gap: $d;
+}
+
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin centerPosition($position) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ^=======> Contact <===== */
+
+@mixin contact($width, $padding, $margin, $font-size, $color, $bg-color, $border-radius) {
+  width: $width;
+  padding: $padding;
+  margin: $margin;
+  font-size: $font-size;
+  color: $color;
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+}
+
+
+/* ^=======> Dark Mode & Light Mode Toggle <===== */ 
+$time: 1s;
+@mixin toggle($a, $b, $c, $d, $e, $f) {
+    display: flex;
+    flex-direction: $a;
+    justify-content: $b;
+    align-items: $c;
+    width: $d;
+    height: $e;
+    background-color: $f;
+    transition: all $time ease;
+    -webkit-transition: all $time ease;
+    -moz-transition: all $time ease;
+    -ms-transition: all $time ease;
+    -o-transition: all $time ease;
+}
+
+
+
+
+
+/* ^=======> Footer <===== */ 
+
+@mixin footer($x, $margin-inline, $font-size) {
+  width: $x;
+  height: $x;
+  line-height: $x;
+  margin-inline: $margin-inline;
+  font-size: $font-size;
+}

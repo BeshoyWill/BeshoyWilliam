@@ -1,0 +1,34 @@
+
+/* &================> Skills Section <================& */
+.skills {
+  .skills-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .btn-group {
+      margin-top: 4rem;
+
+      .btn {
+        background-color: var(--black-color);
+        color: var(--main-color);
+        border: 3px solid var(--main-color);
+      }
+
+      .btn:focus {
+        background-color: var(--main-color);
+        color: var(--black-color);
+        border: 3px solid var(--main-color);
+      }
+    }
+
+    .circular_progress {
+      display: none;
+    }
+    
+    .circular_progress.active {
+      display: block;
+    }
+  }
+}

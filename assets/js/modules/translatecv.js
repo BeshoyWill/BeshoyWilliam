@@ -1,7 +1,8 @@
-import { dropdownBtn, lang, selectLanguage } from "./languageSelector.js";
+import { getStorage, setStorage } from "../utils/helper.js";
+import { lang, selectLanguage, listEl } from "./languageSelector.js";~
 
 selectLanguage();
-console.log(lang);
+console.log(listEl);
 
 let nav = {
   en: {
@@ -73,10 +74,37 @@ export function ChangeLanguage() {
   let translator;
   const dropDown = document.getElementById("nav-icon");
 
+  const savedlang = getStorage("selectedLanguage").split("-")[0];
+
+  console.log(lang.includes(savedlang));
+
+  const savedLang = getStorage("selectedLanguage");
+  let currentLang = savedLang ? savedLang.split("-")[0] : "en"; // Default to "en" if nothing is saved
+  console.log("Current language from localStorage:", currentLang);
+
+  // Initial language setup
+  updateLanguage(currentLang);
+
+  // console.log(listEl);
+
   // Changing the language from the language toggle button
-  dropdownBtn.addEventListener("click", () => {
+  document.addEventListener("localeSelected", function (event) {
+    // Check if a language is stored in localStorage
+    console.log("localStorage: ", getStorage("selectedLanguage").split("-")[0]);
+
+    const selectedLocale = event.detail.locale;
+    console.log("Selected locale:", selectedLocale);
+
+    currentLang = selectedLocale.split("-")[0]; // Get language part before "-"
+
+    setStorage("selectedLanguage", selectedLocale);
+
+    updateLanguage(currentLang);
+  });
+
+  function updateLanguage(lang) {
     if (lang == "de") {
-      console.log("Selected Language: DE"); // German
+      // console.log("Selected Language: DE"); // German
       translator = new EOTranslator(nav, "de");
       document.body.style.direction = "ltr";
 
@@ -106,5 +134,5 @@ export function ChangeLanguage() {
       translator.translateElement(logo);
       translator.translateElement(links);
     }
-  });
+  }
 }

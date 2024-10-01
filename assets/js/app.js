@@ -15,6 +15,9 @@ handleToggleSwitch();
 // Call the function that responsible for the language selector
 selectLanguage();
 
+// Call the function that responsible for ChangeLanguage
+ChangeLanguage();
+
 // Call the function that responsible for nav icon
 navIcon();
 
@@ -26,9 +29,6 @@ selectColor();
 
 // Call the function that responsible for navbarActiveLinks
 navbarActiveLinks();
-
-// Call the function that responsible for ChangeLanguage
-ChangeLanguage();
 
 // Call the function that responsible for the card animation
 cardAnimation();
@@ -61,6 +61,8 @@ $(".testimonial_slider_area").owlCarousel({
   loop: true,
   margin: 30,
   dots: false,
+  handleToggleSwitch: true,
+  rtl: true,
   responsive: {
     320: {
       items: 1,

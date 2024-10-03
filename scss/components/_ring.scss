@@ -1,49 +1,49 @@
 /* *=================> Fire Ring <=================* */
 
-// .ring {
-//     overflow: hidden;
-//     position: absolute;
-//     left: 10%;
-//     right: 50%;
-//     top: 0;
-//     bottom: 0;
-//     min-width: 50%;
-//     max-width: 100%;
+.ring {
+    overflow: hidden;
+    position: absolute;
+    left: 10%;
+    right: 0%;
+    top: -40%;
+    bottom: 0;
+    min-width: 130%;
+    max-width: 100%;
   
-//     /* height: 250px; */
-//     transform: translate(-28%, 10%);
-//     height: var(--size);
-//     filter: url(#wavy) blur(1px);
-//     z-index: 0;
-//     will-change: transform, filter;
-//     -webkit-filter: url(#wavy) blur(1px);
-//     -webkit-transform: translate(-28%, -10%);
-//     -moz-transform: translate(-28%, 10%);
-//     -ms-transform: translate(-28%, 10%);
-//     -o-transform: translate(-28%, 10%);
-//     margin: 0;
-//     padding: 0;
+    /* height: 250px; */
+    transform: translate(-28%, 10%);
+    height: var(--size);
+    filter: url(#wavy) blur(1px);
+    z-index: 0;
+    will-change: transform, filter;
+    -webkit-filter: url(#wavy) blur(1px);
+    -webkit-transform: translate(-28%, -10%);
+    -moz-transform: translate(-28%, 10%);
+    -ms-transform: translate(-28%, 10%);
+    -o-transform: translate(-28%, 10%);
+    margin: 0;
+    padding: 0;
   
-//     &:before, &:after {
-//       content: "";
-//       position: absolute;
-//       top: var(--s);
-//       left: var(--s);
-//       right: var(--s);
-//       bottom: var(--s);
-//       border-radius: 50%;
-//       border: var(--bor) solid #fff;
-//     }
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: var(--s);
+      left: var(--s);
+      right: var(--s);
+      bottom: var(--s);
+      border-radius: 50%;
+      border: var(--bor) solid #fff;
+    }
   
-//     &:before {
-//       box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
-//       -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
-//       animation: move 10s linear infinite;
+    &:before {
+      box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
+      -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+      animation: move 10s linear infinite;
   
-//       /* Increase duration to reduce load */
-//     }
+      /* Increase duration to reduce load */
+    }
   
-//     &:after {
-//       box-shadow: 0 0 calc(var(--bor) / 2) #fff, inset 0 0 var(--bor) #fff;
-//     }
-//   }
+    &:after {
+      box-shadow: 0 0 calc(var(--bor) / 2) #fff, inset 0 0 var(--bor) #fff;
+    }
+  }

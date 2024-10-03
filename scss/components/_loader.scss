@@ -1,0 +1,10 @@
+.loader {
+    position: absolute;
+    inset: 0;
+    z-index: 99999;
+    background-color: #f6f6f6;
+    display: grid;
+    place-content: center;
+    color: var(--main-color);
+    transition: 1s linear ;
+}

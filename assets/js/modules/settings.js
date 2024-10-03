@@ -5,10 +5,95 @@ export function openSettings() {
   const settingsBox = document.querySelector(".settings-box");
   const toggleIcon = document.querySelector(".icon-toggle");
 
+  const navbar = document.querySelector(".header .navbar");
+  const sideBullets = document.querySelector(".nav-bullets");
+
+  const fixedNav = document.querySelectorAll(".nav-option [data-nav]");
+
+  const bullets = document.querySelectorAll(".nav-bull [data-bull]");
+
   toggleIcon.addEventListener("click", () => {
     settingsBox.classList.toggle("open");
   });
+
+  function handleClick(e) {
+    fixedNav.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    e.target.classList.add("active");
+
+    if (e.target.classList[0] === "Yes") {
+      navbar.style.position = "fixed";
+    } else if (e.target.classList[0] === "No") {
+      navbar.style.position = "absolute";
+    }
+
+    setStorage("nav-option", e.target.classList[0]);
+  }
+
+  function handleBullets(e) {
+    bullets.forEach((bullet) => {
+      bullet.classList.remove("active");
+    });
+
+    e.target.classList.add("active");
+
+    if (e.target.classList[0] === "Yes") {
+      sideBullets.style.display = "block";
+    } else if (e.target.classList[0] === "No") {
+      sideBullets.style.display = "none";
+    }
+
+    setStorage("side-bullets", e.target.classList[0]);
+  }
+
+  fixedNav.forEach((button) => {
+    if (button.getAttribute("data-nav") === "true") {
+      button.classList.add("active");
+      navbar.style.position = "fixed";
+    }
+
+    button.addEventListener("click", handleClick);
+  });
+
+  bullets.forEach((bullet) => {
+    if (bullet.getAttribute("data-bull") === "true") {
+      bullet.classList.add("active");
+      sideBullets.style.display = "block";
+    }
+
+    bullet.addEventListener("click", handleBullets);
+  });
+
+  // Apply settings on load
+  const savedNavOption = getStorage("nav-option");
+  const savedBulletsOption = getStorage("side-bullets");
+
+  // Apply the saved navbar position if it exists
+  if (savedNavOption) {
+    const activeNavButton = Array.from(fixedNav).find((button) =>
+      button.classList.contains(savedNavOption)
+    );
+    if (activeNavButton) {
+      changeActive(fixedNav, activeNavButton);
+      navbar.style.position = savedNavOption === "Yes" ? "fixed" : "absolute";
+    }
+  }
+
+  // Apply the saved bullets display if it exists
+  if (savedBulletsOption) {
+    const activeBullet = Array.from(bullets).find((bullet) =>
+      bullet.classList.contains(savedBulletsOption)
+    );
+    if (activeBullet) {
+      changeActive(bullets, activeBullet);
+      sideBullets.style.display =
+        savedBulletsOption === "Yes" ? "block" : "none";
+    }
+  }
 }
+
 /* 
 // *=======> Select Color & save it in local storage
 export function selectColor() {

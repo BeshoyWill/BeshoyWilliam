@@ -10,7 +10,7 @@
   #special-btn {
     min-width: 135px;
     max-width: 200px;
-    min-height: 50px;
+    min-height: 100px;
     border: 0;
     outline: 0;
     color: white;
@@ -74,8 +74,11 @@
   
     .option {
       h3 {
+        margin-bottom: 0.5rem;
         color: var(--color-light-option);
-        font-size: calc(14 / 16 * 1rem);
+        padding-block: 0.5rem;
+        text-align: center;
+        font-size: calc(20 / 16 * 1rem);
       }
   
       .colors-option {
@@ -93,11 +96,11 @@
           cursor: pointer;
   
           &:nth-child(2) {
-            background-color: hsl(200, 100%, 50%);
+            background-color: hsl(4, 90%, 58%);
           }
   
           &:nth-child(3) {
-            background-color: hsl(36, 100%, 50%);
+            background-color: hsl(340, 82%, 52%);
           }
   
           &:nth-child(4) {
@@ -105,19 +108,19 @@
           }
   
           &:nth-child(5) {
-            background-color: hsla(321, 100%, 50%);
+            background-color: hsl(262, 52%, 47%);
           }
   
           &:nth-child(6) {
-            background-color: hsla(343, 100%, 50%);
+            background-color: hsl(199, 98%, 48%);
           }
   
           &:nth-child(7) {
-            background-color: rgb(0, 255, 136);
+            background-color: hsl(187, 100%, 42%);
           }
   
           &:nth-child(8) {
-            background-color: hsla(360, 100%, 50%);
+            background-color: hsl(187, 100%, 51%);
           }
   
           &:nth-child(9) {
@@ -125,7 +128,7 @@
           }
   
           &:nth-child(10) {
-            background-color: hsla(129, 100%, 50%);
+            background-color: rgb(94, 255, 20);
           }
   
           &:nth-child(11) {
@@ -137,11 +140,11 @@
           }
   
           &:nth-child(13) {
-            background-color: hsla(62, 100%, 50%);
+            background-color: hsl(88, 50%, 53%);
           }
   
           &:nth-child(14) {
-            background-color: hsl(16, 100%, 50%);
+            background-color: hsl(45, 100%, 51%);
           }
   
           &.active {
@@ -158,6 +161,7 @@
   
   hr {
     border-top: 1px solid var(--main-color);
+    margin-block: 2rem;
   }
   
   /* background img option */

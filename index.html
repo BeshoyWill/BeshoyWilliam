@@ -50,6 +50,12 @@
 
   </head>
   <body>
+
+    
+      <!-- loader -->
+      <div class="loader"><i class="fas fa-spinner fa-spin fa-5x "></i></div>
+      <!-- setting box  -->
+
     <!-- *=========> setting box <========= -->
     <div id="settingsBox" class="settings-box">
       <div class="sett-con">
@@ -72,8 +78,6 @@
               <li data-color="#4caf50"></li>
               <li data-color="#8bc34a"></li>
               <li data-color="#ffc107"></li>
-              <li data-color="#ff5722"></li>
-              <li data-color="#795548"></li>
             </ul>
           </div>
           <hr />
@@ -81,14 +85,14 @@
             <h3>Nav Fixed</h3>
             <div class="nav-option op-y-n">
               <span data-nav="true" class="Yes">Yes</span>
-              <span data-nav="false" class="No active">No</span>
+              <span data-nav="false" class="No">No</span>
             </div>
           </div>
           <hr />
           <div class="option">
             <h3>Show Bullets</h3>
             <div class="nav-bull op-y-n">
-              <span data-bull="true" class="Yes active">Yes</span>
+              <span data-bull="true" class="Yes">Yes</span>
               <span data-bull="false" class="No">No</span>
             </div>
           </div>
@@ -414,15 +418,15 @@
           <div class="about-img">
             <div class="ring">
             </div>
-            <img src="assets/images/about.png" alt="profile-image" />
-            <!-- <svg>
+            <img src="assets/images/about.png" alt="profile-image" loading="lazy" />
+            <svg>
               <filter id="wavy">
                 <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" speed="2">
                   <animate attributeName="baseFrequency" dur="60s" values="0.02; 0.005; 0.02" repeatCount="indefinite">
                 </feTurbulence>
                 <feDisplacementMap in="SourceGraphic" scale="30"></feTurbulence>
               </filter>
-            </svg> -->
+            </svg>
           </div>
 
           <div class="about-content">

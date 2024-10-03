@@ -3,12 +3,12 @@ My JavaScript Portfolio :-
 Design First:
 1) You need to fix the design of the settings bar to make the colours match JS colours.
 2) make an image for the second section.
+3) fix all text with dark-theme mode.
+4) make animation for all sections.
 
 
 Code Second:
 1) fix the scroll function to work even if the language has changed on the website.
-2) make button that fix navbar and one for hiding the bullets in the page.
 3) fix the api used to be able for any user to contact me by mail.
 4) translate the whole website with fixing the design with the language chosed specially if it was Arabic.
 5) fix the projects section.
-6) adding refresh spinner before the page is loaded.

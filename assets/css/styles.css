@@ -68,6 +68,7 @@ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
+  overflow: hidden;
   /* 2 */
 }
 
@@ -78,6 +79,7 @@ html {
  */
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 /**
@@ -727,6 +729,7 @@ section:nth-child(odd) {
 .about .about-me .about-img {
   width: 40%;
   height: 10rem;
+  position: relative;
 }
 .about .about-me .about-img img {
   left: -15%;
@@ -1372,6 +1375,17 @@ section:nth-child(odd) {
     transform: translate3d(85px, 0, 0);
   }
 }
+.loader {
+  position: absolute;
+  inset: 0;
+  z-index: 99999;
+  background-color: #f6f6f6;
+  display: grid;
+  place-content: center;
+  color: var(--main-color);
+  transition: 1s linear;
+}
+
 /*  &================> Nav Bullets <================& */
 .nav-bullets {
   position: fixed;
@@ -1672,7 +1686,7 @@ input[type=checkbox] {
 #special-btn {
   min-width: 135px;
   max-width: 200px;
-  min-height: 50px;
+  min-height: 100px;
   border: 0;
   outline: 0;
   color: white;
@@ -1727,8 +1741,11 @@ input[type=checkbox] {
   left: 195px;
 }
 .settings-box .option h3 {
+  margin-bottom: 0.5rem;
   color: var(--color-light-option);
-  font-size: 0.875rem;
+  padding-block: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
 }
 .settings-box .option .colors-option {
   padding-left: 1rem;
@@ -1745,31 +1762,31 @@ input[type=checkbox] {
   cursor: pointer;
 }
 .settings-box .option .colors-option li:nth-child(2) {
-  background-color: hsl(200, 100%, 50%);
+  background-color: hsl(4, 90%, 58%);
 }
 .settings-box .option .colors-option li:nth-child(3) {
-  background-color: hsl(36, 100%, 50%);
+  background-color: hsl(340, 82%, 52%);
 }
 .settings-box .option .colors-option li:nth-child(4) {
   background-color: hsl(294, 100%, 50%);
 }
 .settings-box .option .colors-option li:nth-child(5) {
-  background-color: hsl(321, 100%, 50%);
+  background-color: hsl(262, 52%, 47%);
 }
 .settings-box .option .colors-option li:nth-child(6) {
-  background-color: hsl(343, 100%, 50%);
+  background-color: hsl(199, 98%, 48%);
 }
 .settings-box .option .colors-option li:nth-child(7) {
-  background-color: rgb(0, 255, 136);
+  background-color: hsl(187, 100%, 42%);
 }
 .settings-box .option .colors-option li:nth-child(8) {
-  background-color: hsl(0, 100%, 50%);
+  background-color: hsl(187, 100%, 51%);
 }
 .settings-box .option .colors-option li:nth-child(9) {
   background-color: hsl(174, 100%, 50%);
 }
 .settings-box .option .colors-option li:nth-child(10) {
-  background-color: hsl(129, 100%, 50%);
+  background-color: rgb(94, 255, 20);
 }
 .settings-box .option .colors-option li:nth-child(11) {
   background-color: hsl(88, 50%, 50%);
@@ -1778,10 +1795,10 @@ input[type=checkbox] {
   background-color: hsl(45, 100%, 50%);
 }
 .settings-box .option .colors-option li:nth-child(13) {
-  background-color: hsl(62, 100%, 50%);
+  background-color: hsl(88, 50%, 53%);
 }
 .settings-box .option .colors-option li:nth-child(14) {
-  background-color: hsl(16, 100%, 50%);
+  background-color: hsl(45, 100%, 51%);
 }
 .settings-box .option .colors-option li.active {
   opacity: 1;
@@ -1792,6 +1809,7 @@ input[type=checkbox] {
 /* color option*/
 hr {
   border-top: 1px solid var(--main-color);
+  margin-block: 2rem;
 }
 
 /* background img option */
@@ -1838,6 +1856,49 @@ h2.heading span {
 }
 
 /* *=================> Fire Ring <=================* */
+.ring {
+  overflow: hidden;
+  position: absolute;
+  left: 10%;
+  right: 0%;
+  top: -40%;
+  bottom: 0;
+  min-width: 130%;
+  max-width: 100%;
+  /* height: 250px; */
+  transform: translate(-28%, 10%);
+  height: var(--size);
+  filter: url(#wavy) blur(1px);
+  z-index: 0;
+  will-change: transform, filter;
+  -webkit-filter: url(#wavy) blur(1px);
+  -webkit-transform: translate(-28%, -10%);
+  -moz-transform: translate(-28%, 10%);
+  -ms-transform: translate(-28%, 10%);
+  -o-transform: translate(-28%, 10%);
+  margin: 0;
+  padding: 0;
+}
+.ring:before, .ring:after {
+  content: "";
+  position: absolute;
+  top: var(--s);
+  left: var(--s);
+  right: var(--s);
+  bottom: var(--s);
+  border-radius: 50%;
+  border: var(--bor) solid #fff;
+}
+.ring:before {
+  box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333));
+  animation: move 10s linear infinite;
+  /* Increase duration to reduce load */
+}
+.ring:after {
+  box-shadow: 0 0 calc(var(--bor) / 2) #fff, inset 0 0 var(--bor) #fff;
+}
+
 /* *=================> Footer Wave <=================* */
 .footageZone {
   position: absolute;

@@ -9,6 +9,7 @@ import { cardAnimation } from "./modules/cardAnimation.js";
 import { Projects } from "./modules/projects.js";
 import { Skills } from "./modules/skills.js";
 import { Contact } from "./modules/contact.js";
+
 // Call the function that responsible for the dark-theme toggle switch
 handleToggleSwitch();
 
@@ -77,4 +78,48 @@ $(".testimonial_slider_area").owlCarousel({
       items: 3,
     },
   },
+});
+
+// --- loader
+const loader = document.querySelector(".loader");
+const html = document.querySelector("html");
+html.style.overflow = `hidden`;
+addEventListener("load", () => {
+  loader.style.opacity = `0`;
+  console.log("html: ", HTMLBodyElement);
+  setTimeout(() => {
+    html.style.overflow = `auto`;
+    loader.style.display = `none`;
+  }, 1000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const turbulence = document.querySelector("feTurbulence");
+
+  let baseFrequency = 0.02; // Starting value
+  const minFrequency = 0.005;
+  const maxFrequency = 0.02;
+  const duration = 60000; // 60 seconds animation duration
+  const scaleFactor = 0.005; // How much frequency changes
+
+  let startTime = null;
+
+  function animateTurbulence(time) {
+    if (!startTime) startTime = time;
+    const elapsed = time - startTime;
+
+    // Adjust frequency over time
+    baseFrequency =
+      minFrequency +
+      ((maxFrequency - minFrequency) * (elapsed % duration)) / duration;
+
+    // Update the filter's `baseFrequency` attribute
+    turbulence.setAttribute("baseFrequency", baseFrequency);
+
+    // Continue the animation with `requestAnimationFrame` for smoother updates
+    requestAnimationFrame(animateTurbulence);
+  }
+
+  // Start the animation loop
+  requestAnimationFrame(animateTurbulence);
 });

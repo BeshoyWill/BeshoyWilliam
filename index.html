@@ -19,16 +19,14 @@
       rel="stylesheet"
     />
 
+    <!-- *=========> Font Awesome Icons  <========= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
     <!-- *=========> Box Icons <========= -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
-    />
-
-    <!-- *=========> Font Awesome Icons  <========= -->
-    <link
-      rel="stylesheet"
-      href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
 
     <!-- *=========> Progress Circle  <========= -->
@@ -401,7 +399,7 @@
           
           <div class="home-img wow bounceIn"
           data-wow-duration="1s" data-wow-delay="1s" >
-          <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle" style="left: 50%;">
+          <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle" style="left: 50%;" id="profileVideo">
             <img src="assets/images/portfolioImage.png" alt="profile-image" />
           </a>
           </div>
@@ -415,7 +413,8 @@
         <h2 class="heading">About <span>Me</span></h2>
 
         <div class="about-me">
-          <div class="about-img">
+          <div class="about-img logo wow slideInLeft"
+          data-wow-duration="1s" >
             <div class="ring">
             </div>
             <img src="assets/images/about.png" alt="profile-image" loading="lazy" />
@@ -429,7 +428,8 @@
             </svg>
           </div>
 
-          <div class="about-content">
+          <div class="about-content logo wow slideInRight"
+          data-wow-duration="1s">
             <h4>About Me</h4>
             <h3>1 Year's Experience In Web Development</h3>
             <p>
@@ -442,11 +442,6 @@
               explored the server-side magic. It’s like being a code
               architect—building the foundation that powers the visible magic.
             </p>
-            <div class="btn-group">
-              <a href="#" class="btn"> Education </a>
-              <a href="#" class="btn"> Computer Skills </a>
-              <a href="#" class="btn"> Language Skills </a>
-            </div>
             
 
             <div class="experience-info">
@@ -484,7 +479,7 @@
       <div class="container">
         <h2 class="heading">My Ski<span>lls</span></h2>
 
-        <div class="skills-content">
+        <div class="skills-content wow bounceInUp" data-wow-duration="1.25s">
           <div class="btn-group">
             <a href="#" class="btn" id="ui-btn"> UI / UX </a>
             <a href="#" class="btn" id="frontend-btn"> Front-End </a>
@@ -669,7 +664,7 @@
         <h2 class="heading">My Projects</h2>
 
         <div class="projects-content">
-          <div class="parent">
+          <div class="parent  wow flipInX" data-wow-duration="1s">
             <div class="card">
               <div class="content-box">
                 <h1 class="card-title">Yummy</h1>
@@ -686,7 +681,7 @@
             </div>
           </div>
 
-          <div class="parent">
+          <div class="parent  wow flipInX" data-wow-duration="1.5s">
             <div class="card">
               <div class="content-box">
                 <h1 class="card-title">FreeToGame</h1>
@@ -703,7 +698,7 @@
             </div>
           </div>
 
-          <div class="parent">
+          <div class="parent  wow flipInX" data-wow-duration="2s">
             <div class="card">
               <div class="content-box">
                 <h1 class="card-title">Card Title</h1>
@@ -731,7 +726,7 @@
       <div class="container">
         <h2 class="heading">Life Time<span>line</span></h2>
 
-        <div class="timeline-items">
+        <div class="timeline-items wow bounceIn"  data-wow-duration="2s">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2018</div>
           <div class="timeline-content">
@@ -748,7 +743,7 @@
           </div>
         </div>
 
-        <div class="timeline-items">
+        <div class="timeline-items wow bounceIn" id="timeline" data-wow-duration="2s">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2022</div>
           <div class="timeline-content">
@@ -768,7 +763,7 @@
           </div>
         </div>
 
-        <div class="timeline-items">
+        <div class="timeline-items wow bounceIn" id="timeline" data-wow-duration="2s">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2023</div>
           <div class="timeline-content">
@@ -785,7 +780,7 @@
           </div>
         </div>
 
-        <div class="timeline-items">
+        <div class="timeline-items wow bounceIn" id="timeline" data-wow-duration="2s">
           <div class="timeline-dot"></div>
 
           <div class="timeline-date">2024</div>
@@ -1073,15 +1068,7 @@
     <!-- *=========> GLightbox JS <========= -->       
     <script src="assets/vendors/js/glightbox.min.js"></script>
 
-    <script type="text/javascript">
-      const lightbox = GLightbox({
-        'touchNavigation': true,
-        'href': 'https://www.youtube.com/watch?v=SUusaixCBl0&list=LL&index=1&t=169s',
-        'type': 'video',
-        'source': 'youtube', //vimeo, youtube or local
-        'width': 900,
-        'autoPlayVideos': 'true',
-      });
+    <script type="text/javascript" src="assets/js/modules/introductionVideo.js">
     </script>
 
 

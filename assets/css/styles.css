@@ -1083,11 +1083,13 @@ section:nth-child(odd) {
   background: rgba(0, 0, 0, 0.7);
   border: 3px solid rgba(238, 238, 238, 0.2);
   border-radius: 2rem;
-  padding: 30px 60px;
+  padding: 30px 40px;
   cursor: pointer;
   text-align: center;
-  gap: 1.5rem;
+  gap: 0rem;
   color: var(--white-color);
+  margin-block: 50px;
+  margin-inline: 20px;
 }
 .testimonials .testimonials-box .testimonials-item:hover {
   border: 3px sollid var(--main-color);
@@ -1107,29 +1109,26 @@ section:nth-child(odd) {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
 }
 
 .owl-nav {
-  position: absolute;
-  left: -4%;
-  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  left: 0%;
+  right: 0%;
+  margin-top: 20px;
   top: 50%;
-  transform: translateY(-50%);
 }
 
 .owl-next {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
 }
 
 .owl-prev {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
 }
 
 .owl-next i, .owl-prev i {
@@ -2672,14 +2671,6 @@ body {
 @media (max-width: 1200px) {
   .testimonials .testimonials-item {
     margin: auto;
-  }
-  .owl-nav {
-    left: 0%;
-  }
-}
-@media (max-width: 992px) {
-  .owl-nav {
-    left: -4%;
   }
 }
 @media screen and (max-width: 992px) {

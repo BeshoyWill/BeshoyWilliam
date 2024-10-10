@@ -1,3 +1,6 @@
+import { currentLang } from "../modules/translatecv.js";
+let alertMsg;
+
 export function Contact() {
   const form = document.querySelector("form");
   const fullName = document.getElementById("name");
@@ -5,6 +8,16 @@ export function Contact() {
   const phone = document.getElementById("phone");
   const subject = document.getElementById("subject");
   const message = document.getElementById("message");
+
+  document.addEventListener("localeSelected", function () {
+    if (currentLang === "en") {
+      alertMsg = "can't be blank";
+    } else if (currentLang === "ar") {
+      alertMsg = "لا يمكن أن يكون فارغًا";
+    } else if (currentLang === "de") {
+      alertMsg = "darf nicht leer sein";
+    }
+  });
 
   function sendEmail() {
     const bodyMessage = `Full Name: ${fullName.value} <br> Email: ${email.value} <br> Phone: ${phone.value} <br> Subject: ${subject.value} <br> Message: ${message.value}`;
@@ -39,7 +52,7 @@ export function Contact() {
 
     items.forEach((item) => {
       if (item.value.trim() === "") {
-        setError(item, `${item.placeholder} can't be blank`);
+        setError(item, `${item.placeholder} ${alertMsg}`);
         isValid = false;
       } else {
         setSuccess(item);
@@ -81,7 +94,7 @@ export function Contact() {
   items.forEach((item) => {
     item.addEventListener("blur", () => {
       if (item.value.trim() === "") {
-        setError(item, `${item.placeholder} can't be blank`);
+        setError(item, `${item.placeholder} ${alertMsg}`);
       } else {
         setSuccess(item);
       }

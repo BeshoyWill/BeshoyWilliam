@@ -33,10 +33,17 @@
 
 // *=========> End Of Standard Break Points for my project
 
+@media screen and (max-width: 1400px) {
+  .header .navbar {
+    .navbar-all {
+      gap: 5rem;
+    }
+  }
+}
+
 @media screen and (max-width: 1300px) {
     .header .navbar {
-      justify-content: space-between !important;
-      padding: 3rem 4% !important;
+      padding: 3rem 6%;
 
       .logo {
         font-size: 3rem;
@@ -62,11 +69,12 @@
             display: flex;
             flex-direction: column;
             top: 30px;
-            right: 4.75rem;
             z-index: 999;
+            margin-top: 10px;
+            margin-inline: -25px;
             transform: rotateZ(0) scale(1.0000001);
             border-radius: 10px;
-            
+
 
             a {
             color: black;
@@ -101,7 +109,27 @@
       
 }
 
+@media (max-width: 600px) {
+      .header .navbar {
+        width: 95%;
+        flex-direction: row;
+        justify-content: center;
+      }
+}
+
+
+@media (max-width: 550px) {
+      .header .navbar {
+        .logo {
+          font-size: 2.25rem;
+        }
+      }
+}
+
 @media screen and (max-width: 350px) {
+  .logo {
+    font-size: 1.5rem;
+  }
   .header .navbar {
     .smart-features {
       flex-direction: column-reverse;

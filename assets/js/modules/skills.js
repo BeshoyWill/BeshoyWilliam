@@ -30,18 +30,27 @@ export function Skills() {
       e.preventDefault(); // Prevent the default link behavior
       showSkills(uiSkills);
       saveToLocalStorage("uiSkills");
+      uiBtn.classList.add("active");
+      frontendBtn.classList.remove("active");
+      backendBtn.classList.remove("active");
     });
 
     frontendBtn.addEventListener("click", function (e) {
       e.preventDefault(); // Prevent the default link behavior
       showSkills(frontendSkills);
       saveToLocalStorage("frontendSkills");
+      uiBtn.classList.remove("active");
+      frontendBtn.classList.add("active");
+      backendBtn.classList.remove("active");
     });
 
     backendBtn.addEventListener("click", function (e) {
       e.preventDefault(); // Prevent the default link behavior
       showSkills(backendSkills);
       saveToLocalStorage("backendSkills");
+      uiBtn.classList.remove("active");
+      frontendBtn.classList.remove("active");
+      backendBtn.classList.add("active");
     });
 
     // Initially load from local storage or default to UI/UX section

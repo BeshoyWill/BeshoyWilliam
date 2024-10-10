@@ -489,7 +489,7 @@ section:nth-child(odd) {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(0.625rem);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   z-index: 999;
 }
@@ -512,9 +512,11 @@ section:nth-child(odd) {
 .navbar-all {
   display: flex;
   align-items: center;
-  gap: 10rem;
+  justify-content: space-between;
+  gap: 15rem;
 }
 .navbar-all .navlinks a {
+  margin-inline: 1px;
   font-size: 1.7rem;
   color: var(--text-color);
   font-weight: 500;
@@ -523,6 +525,17 @@ section:nth-child(odd) {
   transform-origin: right top;
   opacity: 0;
   animation: move-menu 0.8s cubic-bezier(0.42, 0.97, 0.52, 1.49) forwards;
+}
+.navbar-all .navlinks a.ar {
+  transform-origin: left top;
+  transform: translateX(100%);
+  letter-spacing: 0;
+  font-size: 20px;
+  font-weight: 800;
+  margin-inline-start: 10px;
+}
+.navbar-all .navlinks a.ar:is(.active, :hover) {
+  letter-spacing: 0;
 }
 .navbar-all .navlinks a:nth-child(1) {
   animation-delay: 0.2s;
@@ -557,7 +570,7 @@ section:nth-child(odd) {
 }
 .navbar-all .navlinks a:is(.active, :hover) {
   color: var(--main-color);
-  letter-spacing: 0.1875rem;
+  letter-spacing: 2px;
   font-weight: 700;
 }
 .navbar-all .smart-features {
@@ -695,8 +708,11 @@ section:nth-child(odd) {
   color: var(--main-color);
   transition: 0.3s ease-in-out;
 }
-.home .social-icons a:not(:first-child) {
-  margin: 3rem 0 3rem 3rem;
+.home .social-icons a:not(:last-child) {
+  margin: 3rem 1rem 3rem 1rem;
+}
+.home .social-icons a:last-child {
+  margin: 0 1rem 0 1rem;
 }
 .home .social-icons a:hover {
   color: var(--black-color);
@@ -731,6 +747,9 @@ section:nth-child(odd) {
   height: 10rem;
   position: relative;
 }
+.about .about-me .about-img:hover {
+  transform: scale(1);
+}
 .about .about-me .about-img img {
   left: -15%;
   width: 38vw;
@@ -748,6 +767,9 @@ section:nth-child(odd) {
   text-align: left;
   margin: 0;
   padding: 0;
+}
+.about .about-me .about-content:hover {
+  transform: scale(1);
 }
 .about .about-me .about-content h4 {
   font-size: 3.5rem;
@@ -806,7 +828,7 @@ section:nth-child(odd) {
   color: var(--main-color);
   border: 3px solid var(--main-color);
 }
-.skills .skills-content .btn-group .btn:focus {
+.skills .skills-content .btn-group .btn.active {
   background-color: var(--main-color);
   color: var(--black-color);
   border: 3px solid var(--main-color);
@@ -968,33 +990,54 @@ section:nth-child(odd) {
   padding-left: calc(50% + 30px);
 }
 .timeline .timeline-dot {
-  height: 21px;
-  width: 21px;
-  background-color: var(--main-color);
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--main-color);
   box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
   position: absolute;
   left: calc(50% + 8px);
   border-radius: 50%;
   top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.timeline .timeline-dot img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.timeline .timeline-dot:hover {
+  transform: scale(1.13);
 }
 .timeline .timeline-date {
   font-size: 20px;
   font-weight: 800;
   color: var(--white-color);
-  margin: 6px 0 15px;
+  margin: 20px 0 20px;
 }
 .timeline .timeline-content {
   background-color: var(--bg-color);
   border: 3px solid var(--main-color);
   padding: 30px 50px;
-  border-radius: 4rem;
+  border-radius: 1.5rem;
   box-shadow: 0 0 10px var(--main-color);
   cursor: pointer;
-  transition: 0.3s easy-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: left;
 }
+.timeline .timeline-content ul {
+  list-style-type: disc;
+  font-size: large;
+}
+.timeline .timeline-content ul * {
+  margin: 0 0 10px;
+}
 .timeline .timeline-content:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 0 25px var(--main-color);
 }
 .timeline .timeline-content h3 {
@@ -2327,6 +2370,7 @@ body {
   font-weight: 600;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+  margin: 0 0.5rem;
 }
 .btn-group .btn:hover {
   transition: scale(1.05);
@@ -2359,10 +2403,14 @@ body {
 @media (max-width: 576px) {
   /* Styles for small devices */
 }
+@media screen and (max-width: 1400px) {
+  .header .navbar .navbar-all {
+    gap: 5rem;
+  }
+}
 @media screen and (max-width: 1300px) {
   .header .navbar {
-    justify-content: space-between !important;
-    padding: 3rem 4% !important;
+    padding: 3rem 6%;
   }
   .header .navbar .logo {
     font-size: 3rem;
@@ -2384,8 +2432,9 @@ body {
     display: flex;
     flex-direction: column;
     top: 30px;
-    right: 4.75rem;
     z-index: 999;
+    margin-top: 10px;
+    margin-inline: -25px;
     transform: rotateZ(0) scale(1.0000001);
     border-radius: 10px;
   }
@@ -2412,7 +2461,22 @@ body {
     display: block;
   }
 }
+@media (max-width: 600px) {
+  .header .navbar {
+    width: 95%;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (max-width: 550px) {
+  .header .navbar .logo {
+    font-size: 2.25rem;
+  }
+}
 @media screen and (max-width: 350px) {
+  .logo {
+    font-size: 1.5rem;
+  }
   .header .navbar .smart-features {
     flex-direction: column-reverse;
   }

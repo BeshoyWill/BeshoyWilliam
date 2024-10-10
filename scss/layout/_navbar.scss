@@ -11,7 +11,7 @@
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(0.625rem);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     z-index: 999;
   }
@@ -36,9 +36,11 @@
   .navbar-all {
     display: flex;
     align-items: center;
-    gap: 10rem;
+    justify-content: space-between;
+    gap: 15rem;
 
     .navlinks a {
+      margin-inline: 1px;
       font-size: 1.7rem;
       color: var(--text-color);
       font-weight: 500;
@@ -47,6 +49,19 @@
       transform-origin: right top;
       opacity: 0;
       animation: move-menu 0.8s cubic-bezier(0.42, 0.97, 0.52, 1.49) forwards;
+
+      &.ar {
+        transform-origin: left top;
+        transform: translateX(100%);
+        letter-spacing: 0;
+        font-size: 20px;
+        font-weight: 800;
+        margin-inline-start: 10px;
+
+        &:is(.active, :hover)  {
+          letter-spacing: 0;
+        }
+      }
     
       @for $i from 1 through 8 {
         &:nth-child(#{$i}) {
@@ -65,7 +80,7 @@
     
       &:is(.active, :hover) {
         color: var(--main-color);
-        letter-spacing: 0.1875rem;
+        letter-spacing: 2px;
         font-weight: 700;
       }
     }

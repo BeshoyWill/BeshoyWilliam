@@ -21,6 +21,10 @@
         width: 40%;
         height: 10rem;
         position: relative;
+
+        &:hover {
+          transform: scale(1);
+        }
       
         img {
           left: -15%;
@@ -42,6 +46,10 @@
         text-align: left;
         margin: 0;
         padding: 0;
+
+        &:hover {
+          transform: scale(1);
+        }
       
         h4 {
           font-size: 3.5rem;

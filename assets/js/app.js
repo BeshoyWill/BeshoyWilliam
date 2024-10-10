@@ -4,17 +4,18 @@ import { navIcon } from "./modules/navIcon.js";
 import { openSettings } from "./modules/settings.js";
 import { selectColor } from "./modules/settings.js";
 import { navbarActiveLinks } from "./modules/navbar.js";
-import { ChangeLanguage } from "./modules/translatecv.js";
+import { ChangeLanguage, currentLang } from "./modules/translatecv.js";
 import { cardAnimation } from "./modules/cardAnimation.js";
 import { Projects } from "./modules/projects.js";
 import { Skills } from "./modules/skills.js";
 import { Contact } from "./modules/contact.js";
-
-// Call the function that responsible for the dark-theme toggle switch
-handleToggleSwitch();
+import { downloadCV } from "./modules/downloadcv.js";
 
 // Call the function that responsible for the language selector
 selectLanguage();
+
+// Call the function that responsible for the dark-theme toggle switch
+handleToggleSwitch();
 
 // Call the function that responsible for ChangeLanguage
 ChangeLanguage();
@@ -22,14 +23,17 @@ ChangeLanguage();
 // Call the function that responsible for nav icon
 navIcon();
 
+// Call the function that responsible for navbarActiveLinks
+navbarActiveLinks();
+
 // Call the function that responsible for open settings
 openSettings();
 
 // Call the function that responsible for selecting Color from Settings
 selectColor();
 
-// Call the function that responsible for navbarActiveLinks
-navbarActiveLinks();
+// Call the function that responsible for downloading cv
+downloadCV();
 
 // Call the function that responsible for the card animation
 cardAnimation();
@@ -122,4 +126,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start the animation loop
   requestAnimationFrame(animateTurbulence);
+});
+
+// Changing the language from the language toggle button
+document.addEventListener("localeSelected", function () {
+  // Call the function that responsible for nav icon
+  navIcon();
+
+  // Call the function that responsible for navbarActiveLinks
+  navbarActiveLinks();
+
+  // Call the function that responsible for Contact
+  Contact();
+
+  setInterval(navIcon(), 100);
 });

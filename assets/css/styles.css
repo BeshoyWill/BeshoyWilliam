@@ -779,7 +779,7 @@ section:nth-child(odd) {
 }
 .about .about-me .about-content h3 {
   font-size: 4.5rem;
-  color: var(--white-color);
+  color: var(--text-color);
   padding: 0;
   margin-bottom: 1rem;
 }
@@ -1016,7 +1016,7 @@ section:nth-child(odd) {
 .timeline .timeline-date {
   font-size: 20px;
   font-weight: 800;
-  color: var(--white-color);
+  color: var(--text-color);
   margin: 20px 0 20px;
 }
 .timeline .timeline-content {
@@ -1042,13 +1042,13 @@ section:nth-child(odd) {
 }
 .timeline .timeline-content h3 {
   font-size: 24px;
-  color: var(--white-color);
+  color: var(--text-color);
   margin: 0 0 10px;
   line-height: 8rem;
   font-weight: 900;
 }
 .timeline .timeline-content p {
-  color: var(--white-color);
+  color: var(--text-color);
   font-size: 16px;
   font-weight: 300;
   line-height: 2.5rem;
@@ -1335,7 +1335,7 @@ section:nth-child(odd) {
   padding: 0 15px;
 }
 .footer ul li a {
-  color: var(--white-color);
+  color: var(--text-color);
   border-bottom: 3px solid transparent;
   transition: var(--transition);
 }
@@ -1346,7 +1346,7 @@ section:nth-child(odd) {
   margin-top: 50px;
   text-align: center;
   font-size: 16px;
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 @keyframes move-menu {
@@ -1542,6 +1542,115 @@ input[type=checkbox] {
 }
 .box .scenary svg {
   width: 16.6666666667px;
+}
+
+.insulator-background {
+  position: absolute;
+  inset: 0;
+  background-color: var(--black-color);
+  z-index: 999;
+  opacity: 0.7;
+  display: none;
+  transition: all 0.5s ease; /* Add a smooth transition */
+  opacity: 0;
+  overflow: hidden;
+  transform: translate(-150%, 0%) scale(0); /* Start from the button with scale 0 */
+}
+.insulator-background.morphing {
+  position: fixed;
+  display: block;
+  transform: scale(1); /* Example of a scaling effect */
+  opacity: 0.8; /* Example of a fading effect */
+}
+
+/* Contact section styles */
+.contact-section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-150%, 0%) scale(0); /* Start from the button with scale 0 */
+  width: 40%;
+  min-width: 300px;
+  height: 300px;
+  padding: 20px 50px;
+  background-color: blue;
+  transition: all 0.5s ease-in-out; /* Smooth transition */
+  z-index: 9999;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 25px var(--main-color);
+  opacity: 0;
+}
+.contact-section.morphing {
+  position: fixed;
+  transform: translate(-50%, -50%) scale(1); /* Scale effect */
+  opacity: 1; /* Make the element visible */
+  visibility: visible; /* Allow interactions */
+}
+
+.contact-section i {
+  color: white;
+  font-size: 1.5rem !important;
+  color: var(--black-color);
+  margin-block: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
+.contact-section i:hover {
+  transform: scale(1.1);
+}
+.contact-section i:before, .contact-section i:after {
+  width: 40px;
+  height: 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+  background-color: var(--text-color);
+  border: 5px solid var(--text-color);
+  box-shadow: 0 0 25px var(--text-color);
+}
+
+.contact-section.active {
+  display: block;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-block: 10px;
+  resize: none;
+}
+
+.contact-section form button {
+  padding: 10px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  width: 50%;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.contact-section form button:hover {
+  background-color: var(--main-color);
+  opacity: 0.8;
 }
 
 .menuicon {
@@ -1890,7 +1999,7 @@ hr {
 h2.heading {
   font-size: 8rem;
   margin-bottom: 5rem;
-  color: var(--white-color);
+  color: var(--text-color);
   text-align: center;
 }
 h2.heading span {

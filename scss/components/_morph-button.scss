@@ -1,0 +1,115 @@
+
+
+  .insulator-background {
+    position: absolute;
+    inset: 0;
+    background-color: var(--black-color);
+    z-index: 999;
+    opacity: 0.7;
+    display: none;
+    transition: all 0.5s ease; /* Add a smooth transition */
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(-150%, 0%) scale(0); /* Start from the button with scale 0 */
+
+    &.morphing {
+      position: fixed;
+      display: block;
+      transform: scale(1); /* Example of a scaling effect */
+      opacity: 0.8;          /* Example of a fading effect */
+    }
+  }
+  /* Contact section styles */
+.contact-section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-150%, 0%) scale(0); /* Start from the button with scale 0 */
+  width: 40%;
+  min-width: 300px;
+  height: 300px;
+  padding: 20px 50px;
+  background-color: blue;
+  transition: all 0.5s ease-in-out; /* Smooth transition */
+  z-index: 9999;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 25px var(--main-color);
+  opacity: 0;
+
+  &.morphing {
+    position: fixed;
+    transform: translate(-50%, -50%) scale(1); /* Scale effect */
+    opacity: 1; /* Make the element visible */
+    visibility: visible; /* Allow interactions */
+  }
+}
+
+
+  .contact-section i {
+    color: white;
+    font-size: 1.5rem !important;
+    color: var(--black-color);
+    margin-block: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:before, &:after {
+      width: 40px;
+      height: 40px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px solid var(--text-color);
+        background-color: var(--text-color);
+        border: 5px solid var(--text-color);
+        box-shadow: 0 0 25px var(--text-color);
+    }
+}
+
+  .contact-section.active {
+    display: block;
+  }
+  
+  .contact-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-section form input,
+  .contact-section form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-block: 10px;
+    resize: none;
+  }
+  
+  .contact-section form button {
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .contact-section form button:hover {
+    background-color: var(--main-color);
+    opacity: 0.8;
+  }
+  

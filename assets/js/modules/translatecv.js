@@ -44,10 +44,24 @@ let nav = {
             </p>
     `,
     homeBtn: `
-                <a href="#contact" class="btn">
-                  Hire Me Now!
-                  <i class="bx bx-right-arrow-alt"></i>
-                </a>
+              <a href="#morphContact" class="btn" id="morphButton">
+                Hire Me Now!
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+                          
+            <div class="insulator-background"></div>
+
+              <section id="morphContact" class="contact-section">
+              <i class="fa-solid fa-x"></i>
+                <h2>Contact Me</h2>
+                <form>
+                  <input type="text" placeholder="Your Name" required>
+                  <input type="email" placeholder="Your Email" required>
+                  <textarea placeholder="Your Message" required></textarea>
+                  <button type="submit">Send Message</button>
+                </form>
+              </section>
+
                 <a href="https://beshoywill.github.io/CV/" class="btn">
                   View CV
                   <i class="bx bxs-right-arrow"></i>
@@ -56,7 +70,7 @@ let nav = {
     aboutTitle: `<h2 class="heading">About <span>Me</span></h2>`,
     aboutContent: `
               <h4>About Me</h4>
-              <h3>1 Year's Experience In Web Development</h3>
+              <h3>2+ Years' Experience in Web Development</h3>
               <p>
                 As a passionate Web Developer, I craft delightful user
                 experiences. My code dances with interactivity, responsiveness,
@@ -198,10 +212,24 @@ let nav = {
             </p>
             `,
     homeBtn: `
-            <a href="#contact" class="btn">
-              Jetzt einstellen!
+            <a href="#morphContact" class="btn" id="morphButton">
+              Stell mich jetzt ein!
               <i class="bx bx-right-arrow-alt"></i>
             </a>
+              
+            <div class="insulator-background"></div>
+
+            <section id="morphContact" class="contact-section">
+            <i class="fa-solid fa-x"></i>
+              <h2>Kontaktieren Sie mich</h2>
+              <form>
+                <input type="text" placeholder="Ihr Name" required>
+                <input type="email" placeholder="Ihre E-Mail" required>
+                <textarea placeholder="Ihre Nachricht" required></textarea>
+                <button type="submit">Nachricht senden</button>
+              </form>
+            </section>
+
             <a href="https://beshoywill.github.io/CV/" class="btn">
               Lebenslauf ansehen
               <i class="bx bxs-right-arrow"></i>
@@ -209,7 +237,7 @@ let nav = {
     aboutTitle: `<h2 class="heading">Über <span>Mich</span></h2>`,
     aboutContent: `
             <h4>Über Mich</h4>
-            <h3>1 Jahr Erfahrung in der Webentwicklung</h3>
+            <h3>Über 2 Jahre Erfahrung in der Webentwicklung</h3>
             <p>
               Als leidenschaftlicher Webentwickler schaffe ich wunderbare Benutzererlebnisse. 
               Mein Code bewegt sich mit Interaktivität, Reaktionsfähigkeit und pixelgenauer Präzision. 
@@ -340,10 +368,24 @@ let nav = {
             </p>
             `,
     homeBtn: `
-            <a href="#contact" class="btn">
-              تواصل معي الآن!
-              <i class="bx bx-left-arrow-alt"></i>
-            </a>
+        <a href="#morphContact" class="btn" id="morphButton">
+          وظفني الآن!
+          <i class="bx bx-right-arrow-alt"></i>
+        </a>
+              
+            <div class="insulator-background"></div>
+
+        <section id="morphContact" class="contact-section">
+        <i class="fa-solid fa-x"></i>
+          <h2>اتصل بي</h2>
+          <form>
+            <input type="text" placeholder="اسمك" required>
+            <input type="email" placeholder="بريدك الإلكتروني" required>
+            <textarea placeholder="رسالتك" required></textarea>
+            <button type="submit">إرسال الرسالة</button>
+          </form>
+        </section>
+
             <a href="https://beshoywill.github.io/CV/" class="btn">
               عرض السيرة الذاتية
               <i class="bx bxs-left-arrow"></i>
@@ -352,7 +394,7 @@ let nav = {
     aboutTitle: `<h2 class="heading">نبذة <span>عني</span></h2>`,
     aboutContent: `
     <h4 style="text-align: right">نبذة عني</h4>
-    <h3 style="text-align: right">خبرة سنة واحدة في تطوير الويب</h3>
+    <h3 style="text-align: right">خبرة تزيد عن سنتين في تطوير الويب/h3>
     <p style="text-align: right">
       كمطور ويب شغوف، أصنع تجارب مستخدم رائعة. شيفرتي تتفاعل مع
       التفاعلية، الاستجابة، والدقة المثالية في التصميم. سواء كان

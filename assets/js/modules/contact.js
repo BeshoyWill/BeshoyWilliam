@@ -2,13 +2,10 @@ import { currentLang } from "../modules/translatecv.js";
 let alertMsg;
 
 export function Contact() {
-  const form = document.querySelector("form");
-  const fullName = document.getElementById("name");
-  const email = document.getElementById("email");
-  const phone = document.getElementById("phone");
-  const subject = document.getElementById("subject");
-  const message = document.getElementById("message");
+  // Select all forms on the page
+  const forms = document.querySelectorAll("form");
 
+  // Set the alert message based on the selected language
   document.addEventListener("localeSelected", function () {
     if (currentLang === "en") {
       alertMsg = "can't be blank";
@@ -19,16 +16,21 @@ export function Contact() {
     }
   });
 
-  function sendEmail() {
-    const bodyMessage = `Full Name: ${fullName.value} <br> Email: ${email.value} <br> Phone: ${phone.value} <br> Subject: ${subject.value} <br> Message: ${message.value}`;
+  // Function to send email
+  function sendEmail(form) {
+    const fullName = form.querySelector("input[type='text']");
+    const email = form.querySelector("input[type='email']");
+    const message = form.querySelector("textarea");
+
+    const bodyMessage = `Full Name: ${fullName.value} <br> Email: ${email.value} <br> Message: ${message.value}`;
 
     Email.send({
       SecureToken: "ee1ac063-423d-48fe-a7e1-8fa45fb2acec",
       From: email.value,
-      Subject: subject.value,
+      Subject: "Contact Form Submission",
       Body: bodyMessage,
     }).then((message) => {
-      if (message == "OK") {
+      if (message === "OK") {
         Swal.fire({
           title: "Success!",
           text: "Message sent successfully!",
@@ -46,8 +48,9 @@ export function Contact() {
     });
   }
 
-  function checkInputs() {
-    const items = document.querySelectorAll(".item");
+  // Function to check inputs
+  function checkInputs(form) {
+    const items = form.querySelectorAll(".item"); // Assuming inputs have the class "item"
     let isValid = true;
 
     items.forEach((item) => {
@@ -59,18 +62,20 @@ export function Contact() {
       }
     });
 
-    if (email.value !== "") {
-      if (!checkEmail(email.value)) {
-        setError(email, "Email is not valid");
+    const emailInput = form.querySelector("input[type='email']");
+    if (emailInput.value !== "") {
+      if (!checkEmail(emailInput.value)) {
+        setError(emailInput, "Email is not valid");
         isValid = false;
       } else {
-        setSuccess(email);
+        setSuccess(emailInput);
       }
     }
 
     return isValid;
   }
 
+  // Set error message
   function setError(input, message) {
     const formControl = input.parentElement;
     const errorDisplay = formControl.querySelector(".error-txt");
@@ -78,47 +83,56 @@ export function Contact() {
     errorDisplay.innerText = message;
   }
 
+  // Set success state
   function setSuccess(input) {
     const formControl = input.parentElement;
     formControl.classList.remove("error");
   }
 
+  // Check email validity
   function checkEmail(email) {
     const emailRegex =
       /^([a-z\d.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
     return emailRegex.test(email);
   }
 
-  // Add event listeners for real-time validation
-  const items = document.querySelectorAll(".item");
-  items.forEach((item) => {
-    item.addEventListener("blur", () => {
-      if (item.value.trim() === "") {
-        setError(item, `${item.placeholder} ${alertMsg}`);
+  // Attach event listeners to each form
+  forms.forEach((form) => {
+    const items = form.querySelectorAll(".item");
+
+    // Add input validation on blur
+    items.forEach((item) => {
+      item.addEventListener("blur", () => {
+        if (item.value.trim() === "") {
+          setError(item, `${item.placeholder} ${alertMsg}`);
+        } else {
+          setSuccess(item);
+        }
+      });
+
+      item.addEventListener("input", () => {
+        if (item.value.trim() !== "") {
+          setSuccess(item);
+        }
+      });
+    });
+
+    // Validate email on input
+    const emailInput = form.querySelector("input[type='email']");
+    emailInput.addEventListener("input", () => {
+      if (emailInput.value.trim() !== "" && !checkEmail(emailInput.value)) {
+        setError(emailInput, "Email is not valid");
       } else {
-        setSuccess(item);
+        setSuccess(emailInput);
       }
     });
 
-    item.addEventListener("input", () => {
-      if (item.value.trim() !== "") {
-        setSuccess(item);
+    // Handle form submission
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (checkInputs(form)) {
+        sendEmail(form);
       }
     });
-  });
-
-  email.addEventListener("input", () => {
-    if (email.value.trim() !== "" && !checkEmail(email.value)) {
-      setError(email, "Email is not valid");
-    } else {
-      setSuccess(email);
-    }
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (checkInputs()) {
-      sendEmail();
-    }
   });
 }

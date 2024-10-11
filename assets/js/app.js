@@ -10,6 +10,7 @@ import { Projects } from "./modules/projects.js";
 import { Skills } from "./modules/skills.js";
 import { Contact } from "./modules/contact.js";
 import { downloadCV } from "./modules/downloadcv.js";
+import { morphBtn } from "./modules/buttonMorph.js";
 
 // Call the function that responsible for the language selector
 selectLanguage();
@@ -31,6 +32,9 @@ openSettings();
 
 // Call the function that responsible for selecting Color from Settings
 selectColor();
+
+// Call the function that responsible for Morphing the button
+morphBtn();
 
 // Call the function that responsible for downloading cv
 downloadCV();
@@ -138,6 +142,9 @@ document.addEventListener("localeSelected", function () {
 
   // Call the function that responsible for Contact
   Contact();
+  // Call the function that responsible for Morphing the button
+  morphBtn();
 
-  setInterval(navIcon(), 100);
+  setInterval(navIcon(), 100000);
+  setInterval(morphBtn(), 100000);
 });

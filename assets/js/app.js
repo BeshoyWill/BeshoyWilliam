@@ -140,11 +140,11 @@ document.addEventListener("localeSelected", function () {
   // Call the function that responsible for navbarActiveLinks
   navbarActiveLinks();
 
-  // Call the function that responsible for Contact
-  Contact();
   // Call the function that responsible for Morphing the button
   morphBtn();
 
+  // Call the function that responsible for Contact
+  Contact();
+
   setInterval(navIcon(), 100000);
-  setInterval(morphBtn(), 100000);
 });

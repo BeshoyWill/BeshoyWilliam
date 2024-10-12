@@ -499,6 +499,7 @@ export function ChangeLanguage() {
   let translator;
   const dropDown = document.getElementById("nav-icon");
   const aboutSection = document.getElementById("about");
+  const aboutImg = document.querySelector(".about-img");
 
   const savedlang = getStorage("selectedLanguage").split("-")[0];
 
@@ -535,6 +536,7 @@ export function ChangeLanguage() {
       document.body.style.direction = "ltr";
 
       dropDown.style.right = "0.5rem";
+      aboutImg.classList.remove("ar");
 
       // Translating the element
       translator.translateDOM(settingsColor, settingsBullets, settingsNav);
@@ -555,6 +557,7 @@ export function ChangeLanguage() {
       document.body.style.direction = "rtl";
 
       dropDown.style.right = "calc(-20px + 97%)";
+      aboutImg.classList.add("ar");
 
       // Translating the element
       translator.translateDOM(settingsColor);
@@ -577,6 +580,7 @@ export function ChangeLanguage() {
       document.body.style.direction = "ltr";
 
       dropDown.style.right = "0.5rem";
+      aboutImg.classList.remove("ar");
 
       // Translating the element
       translator.translateDOM(settingsColor);

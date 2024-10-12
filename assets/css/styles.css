@@ -746,19 +746,29 @@ section:nth-child(odd) {
   width: 40%;
   height: 10rem;
   position: relative;
+  transform: scaleX(-1);
+}
+.about .about-me .about-img.ar {
+  transform: scaleX(1);
+}
+.about .about-me .about-img.ar:hover {
+  transform: scaleX(1);
+}
+.about .about-me .about-img.ar img {
+  left: 50%;
 }
 .about .about-me .about-img:hover {
-  transform: scale(1);
+  transform: scaleX(-1);
 }
 .about .about-me .about-img img {
   left: -15%;
-  width: 38vw;
+  width: 58vw;
   position: relative;
-  transform: translateY(-15%);
-  -webkit-transform: translateY(-15%);
-  -moz-transform: translateY(-15%);
-  -ms-transform: translateY(-15%);
-  -o-transform: translateY(-15%);
+  transform: translateY(0%) translateX(-25%);
+  -webkit-transform: translateY(0%) translateX(-25%);
+  -moz-transform: translateY(0%) translateX(-25%);
+  -ms-transform: translateY(0%) translateX(-25%);
+  -o-transform: translateY(0%) translateX(-25%);
 }
 .about .about-me .about-content {
   display: flex;
@@ -2010,23 +2020,14 @@ h2.heading span {
 .ring {
   overflow: hidden;
   position: absolute;
-  left: 10%;
-  right: 0%;
-  top: -40%;
-  bottom: 0;
-  min-width: 130%;
-  max-width: 100%;
-  /* height: 250px; */
-  transform: translate(-28%, 10%);
+  right: -30%;
+  top: -50%;
+  width: 58vw;
   height: var(--size);
   filter: url(#wavy) blur(1px);
   z-index: 0;
   will-change: transform, filter;
   -webkit-filter: url(#wavy) blur(1px);
-  -webkit-transform: translate(-28%, -10%);
-  -moz-transform: translate(-28%, 10%);
-  -ms-transform: translate(-28%, 10%);
-  -o-transform: translate(-28%, 10%);
   margin: 0;
   padding: 0;
 }
@@ -2572,7 +2573,6 @@ body {
 }
 @media (max-width: 600px) {
   .header .navbar {
-    width: 95%;
     flex-direction: row;
     justify-content: center;
   }
@@ -2697,7 +2697,7 @@ body {
     transform: translateY(-22%);
   }
   .about .about-me .about-content {
-    margin-top: 50%;
+    margin-top: 15%;
     width: 85%;
   }
   .about .about-me .about-content h4 {
@@ -2725,6 +2725,16 @@ body {
     font-size: 1.5rem;
     color: var(--main-color);
     font-weight: 600;
+  }
+  .about .about-me .about-me {
+    top: 150%;
+  }
+  .about .about-me .about-me .about-img {
+    width: 80%;
+    transform: scaleX(-1);
+  }
+  .about .about-me .about-me .about-img img {
+    left: 20%;
   }
 }
 @media (max-width: 992px) {
@@ -2760,6 +2770,96 @@ body {
   }
   .about .about-me .experience-info div p:nth-child(even) {
     font-size: 1.4rem;
+  }
+  .about .about-me .about-me {
+    top: 20%;
+  }
+  .about .about-me .about-me .about-img {
+    width: 80%;
+  }
+  .about .about-me .about-me .about-img img {
+    left: 10%;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  .ring {
+    right: -30%;
+    top: 8vh;
+    width: 65vw;
+    height: 20rem;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1120px) {
+  .ring {
+    top: 8vh;
+    height: 18rem;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1020px) {
+  .ring {
+    top: 5vh;
+    width: 65vw;
+    height: 18rem;
+  }
+}
+@media (max-width: 870px) {
+  .ring {
+    top: 4vh;
+    width: 70vw;
+    height: 21vh;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 800px) {
+  .ring {
+    top: 1vh;
+    width: 70vw;
+    height: 21vh;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 700px) {
+  .ring {
+    top: -1vh;
+    width: 71vw;
+    height: 21vh;
+  }
+}
+/* Small devices (phones, 576px and up) */
+@media (max-width: 600px) {
+  .ring {
+    top: -4vh;
+    left: -30%;
+    width: 85vw;
+    height: 21vh;
+  }
+}
+/* Small devices (phones, 576px and up) */
+@media (max-width: 500px) {
+  .ring {
+    top: -6vh;
+    left: -30%;
+    width: 85vw;
+    height: 20vh;
+  }
+}
+@media (max-width: 480px) {
+  .ring {
+    top: -9vh;
+    left: -65%;
+    width: 450px;
+    height: 19vh;
+  }
+}
+@media (max-width: 350px) {
+  .ring {
+    top: -7vh;
+    left: -50%;
+    width: 320px;
+    height: 20vh;
   }
 }
 @media (max-width: 992px) {

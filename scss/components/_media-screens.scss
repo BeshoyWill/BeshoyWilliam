@@ -111,7 +111,6 @@
 
 @media (max-width: 600px) {
       .header .navbar {
-        width: 95%;
         flex-direction: row;
         justify-content: center;
       }
@@ -277,7 +276,7 @@
   
         
         .about-content {
-          margin-top: 50%;
+          margin-top: 15%;
           width: 85%;
         
           h4 {
@@ -314,6 +313,19 @@
               }
             }
         
+          }
+        }
+
+        .about-me {
+          top: 150%;
+          
+          .about-img {
+            width: 80%;
+            transform: scaleX(-1);
+          
+            img {
+              left: 20%;
+            }
           }
         }
   
@@ -372,10 +384,124 @@
         
           }
         }
+
+        
+        .about-me {
+            top: 20%;
+            
+          .about-img {
+            width: 80%;
+          
+            img {
+              left: 10%;
+            }
+          }
+        }
   
       }
   }
 }
+
+// *=========> Ring <=========*
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  .ring {
+      right: -30%;
+      top: 8vh;
+      width: 65vw;
+      height: 20rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1120px) {
+  .ring {
+      top: 8vh;
+      height: 18rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1020px) {
+  .ring {
+      top: 5vh;
+      width: 65vw;
+      height: 18rem;
+    }
+}
+
+@media (max-width: 870px) {
+  .ring {
+      top: 4vh;
+      width: 70vw;
+      height: 21vh;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 800px) {
+  .ring {
+      top: 1vh;
+      width: 70vw;
+      height: 21vh;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 700px) {
+  .ring {
+      top: -1vh;
+      width: 71vw;
+      height: 21vh;
+    }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (max-width: 600px) {
+  .ring {
+      top: -4vh;
+      left: -30%;
+      width: 85vw;
+      height: 21vh;
+    }
+}
+
+
+/* Small devices (phones, 576px and up) */
+@media (max-width: 500px) {
+  .ring {
+      top: -6vh;
+      left: -30%;
+      width: 85vw;
+      height: 20vh;
+    }
+}
+
+
+@media (max-width: 480px) {
+  .ring {
+      top: -9vh;
+      left: -65%;
+      width: 450px;
+      height: 19vh;
+    }
+}
+
+
+
+@media (max-width: 350px) {
+  .ring {
+      top: -7vh;
+      left: -50%;
+      width: 320px;
+      height: 20vh;
+    }
+}
+
+
+
 
 // &================> Responsive All the Services Section <================&
 

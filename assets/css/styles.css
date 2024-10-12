@@ -1,36 +1,36 @@
 :root {
   /* *=======> Colors <======= */
-  --bg-color:hsl(0, 0%, 3%);
+  --bg-color: hsl(0, 0%, 3%);
   /* #080808 */
-  --second-bg-color:hsl(0, 0%, 8%);
+  --second-bg-color: hsl(0, 0%, 8%);
   /* #131313 */
-  --text-color:var(--white-color);
-  --gray-color:hsl(0, 0%, 50%);
+  --text-color: var(--white-color);
+  --gray-color: hsl(0, 0%, 50%);
   /* #808080 */
-  --white-color:hsl(0, 0%, 100%);
+  --white-color: hsl(0, 0%, 100%);
   /* white */
-  --black-color:hsl(0, 0%, 0%);
+  --black-color: hsl(0, 0%, 0%);
   /* black */
-  --main-color-hue:220;
+  --main-color-hue: 220;
   /* Hue for #0066ff */
-  --main-color:hsl(var(--main-color-hue), 100%, 50%);
-  --footage1-color:hsl(var(--main-color-hue), 100%, 50%);
-  --footage2-color:hsla(0, 0%, 0%, 0.31);
-  --footage3-color:hsla(var(--main-color-hue), 100%, 50%, 0.8);
-  --footage4-color:hsla(var(--main-color-hue), 100%, 50%, 0.4);
+  --main-color: hsl(var(--main-color-hue), 100%, 50%);
+  --footage1-color: hsl(var(--main-color-hue), 100%, 50%);
+  --footage2-color: hsla(0, 0%, 0%, 0.31);
+  --footage3-color: hsla(var(--main-color-hue), 100%, 50%, 0.8);
+  --footage4-color: hsla(var(--main-color-hue), 100%, 50%, 0.4);
   /* *=======> Breakpoints <======= */
-  --container-xxl:1320px;
-  --container-xl:1140px;
-  --container-lg:960px;
-  --container-md:720px;
-  --container-sm:540px;
-  --container-xs:100%;
-  --container-fluid:100%;
+  --container-xxl: 1320px;
+  --container-xl: 1140px;
+  --container-lg: 960px;
+  --container-md: 720px;
+  --container-sm: 540px;
+  --container-xs: 100%;
+  --container-fluid: 100%;
   /* *=======> Animation Duration <======= */
-  --transition:all 0.3s linear;
+  --transition: all 0.3s linear;
   /* *=======> Filters <======= */
-  --hue-rotate:20deg;
-  --hue-filter:0%;
+  --hue-rotate: 20deg;
+  --hue-filter: 0%;
   --size: 110vh;
   --s: calc(var(--size) / 6);
   --bor: calc(var(--size) / 50);
@@ -39,23 +39,23 @@
 
 /* Light Theme Colors */
 .light-theme {
-  --bg-color:hsl(0, 0%, 100%);
+  --bg-color: hsl(0, 0%, 100%);
   /* white */
-  --second-bg-color:hsl(0, 0%, 95%);
-  --text-color:hsl(0, 0%, 3%);
-  --gray-color:hsl(0, 0%, 50%);
-  --white-color:hsl(0, 0%, 100%);
+  --second-bg-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 3%);
+  --gray-color: hsl(0, 0%, 50%);
+  --white-color: hsl(0, 0%, 100%);
   /* white */
-  --black-color:hsl(0, 0%, 0%);
+  --black-color: hsl(0, 0%, 0%);
   /* black */
-  --main-color-hue:0;
-  --main-color:hsl(var(--main-color-hue), 0%, 50%);
-  --footage1-color:hsl(var(--main-color-hue), 0%, 50%);
-  --footage2-color:hsla(0, 0%, 0%, 0.31);
-  --footage3-color:hsla(var(--main-color-hue), 0%, 50%, 0.8);
-  --footage4-color:hsla(var(--main-color-hue), 0%, 50%, 0.4);
-  --hue-rotate:20deg;
-  --hue-filter:100%;
+  --main-color-hue: 0;
+  --main-color: hsl(var(--main-color-hue), 0%, 50%);
+  --footage1-color: hsl(var(--main-color-hue), 0%, 50%);
+  --footage2-color: hsla(0, 0%, 0%, 0.31);
+  --footage3-color: hsla(var(--main-color-hue), 0%, 50%, 0.8);
+  --footage4-color: hsla(var(--main-color-hue), 0%, 50%, 0.4);
+  --hue-rotate: 20deg;
+  --hue-filter: 100%;
 }
 
 /* Document
@@ -149,7 +149,8 @@ abbr[title] {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-b, strong {
+b,
+strong {
   font-weight: bolder;
 }
 
@@ -157,7 +158,9 @@ b, strong {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-code, kbd, samp {
+code,
+kbd,
+samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
@@ -175,7 +178,8 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -205,7 +209,11 @@ img {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
   /* 1 */
   font-size: 100%;
@@ -220,7 +228,8 @@ button, input, optgroup, select, textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button, input {
+button,
+input {
   /* 1 */
   overflow: visible;
 }
@@ -229,7 +238,8 @@ button, input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button, select {
+button,
+select {
   /* 1 */
   text-transform: none;
 }
@@ -237,14 +247,20 @@ button, select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-button, [type=button], [type=reset], [type=submit] {
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -252,7 +268,10 @@ button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-fo
 /**
  * Restore the focus styles unset by the previous rule.
  */
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -302,7 +321,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox], [type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -312,7 +332,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -320,13 +341,13 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
 }
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -365,7 +386,8 @@ summary {
 /**
  * Add the correct display in IE 10+.
  */
-template, [hidden] {
+template,
+[hidden] {
   display: none;
 }
 
@@ -564,7 +586,8 @@ section:nth-child(odd) {
 .navbar-all .navlinks a:not(:first-child) {
   margin-left: 1.6rem;
 }
-.navbar-all .navlinks a:hover, .navbar-all .navlinks a.active {
+.navbar-all .navlinks a:hover,
+.navbar-all .navlinks a.active {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
@@ -691,7 +714,8 @@ section:nth-child(odd) {
   -o-transform: translate(-50%, 0) scale(2.4);
 }
 .home .home-img:hover {
-  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
 }
 .home .social-icons a {
   display: flex;
@@ -1184,14 +1208,16 @@ section:nth-child(odd) {
   position: relative;
 }
 
-.owl-next i, .owl-prev i {
+.owl-next i,
+.owl-prev i {
   font-size: 20px;
   border: 2px solid var(--main-color);
   border-radius: 50%;
   padding: 10px;
 }
 
-.owl-next i:hover, .owl-prev i:hover {
+.owl-next i:hover,
+.owl-prev i:hover {
   background: var(--main-color);
   color: var(--black-color);
 }
@@ -1274,7 +1300,8 @@ section:nth-child(odd) {
   border: 1.5px solid #d93025;
   box-shadow: 2px 2px 15px #d93025;
 }
-.contact form .field.error input::placeholder, .contact form .field.error textarea::placeholder {
+.contact form .field.error input::placeholder,
+.contact form .field.error textarea::placeholder {
   color: #d93025;
 }
 .contact form .field.error .error-txt {
@@ -1286,13 +1313,15 @@ section:nth-child(odd) {
 .contact form .btn {
   margin-top: 2rem;
 }
-.contact form input::placeholder, .contact form textarea::placeholder {
+.contact form input::placeholder,
+.contact form textarea::placeholder {
   color: var(--main-color);
   /* Replace with your desired color */
   opacity: 0.6;
   /* Ensure the color is fully visible; default is usually lower */
 }
-.contact form input:focus, .contact form textarea:focus {
+.contact form input:focus,
+.contact form textarea:focus {
   outline: none;
 }
 
@@ -1374,33 +1403,57 @@ section:nth-child(odd) {
   }
 }
 @keyframes words {
-  0%, 20% {
+  0%,
+  20% {
     content: "Frontend Developer";
   }
-  21%, 40% {
+  21%,
+  40% {
     content: "Web Designer";
   }
-  41%, 60% {
+  41%,
+  60% {
     content: "UI / UX Designer";
   }
-  61%, 80% {
+  61%,
+  80% {
     content: "Backend Developer";
   }
-  81%, 100% {
+  81%,
+  100% {
     content: "Software Tester";
   }
 }
 @keyframes typing {
-  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
     width: 0;
   }
-  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100% {
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%,
+  100% {
     width: calc(100% + 8px);
   }
 }
 @keyframes move {
   0% {
-    box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
+    box-shadow: 0 0 var(--boxShadow) var(--main-color),
+      inset 0 0 var(--boxShadow) var(--main-color);
     filter: hue-rotate(0deg);
   }
   20% {
@@ -1416,7 +1469,8 @@ section:nth-child(odd) {
     box-shadow: 0 0 100px var(--main-color), inset 0 0 100px var(--main-color);
   }
   100% {
-    box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
+    box-shadow: 0 0 var(--boxShadow) var(--main-color),
+      inset 0 0 var(--boxShadow) var(--main-color);
   }
 }
 @keyframes move-forever {
@@ -1491,7 +1545,7 @@ section:nth-child(odd) {
   border-color: transparent transparent transparent var(--main-color);
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -1611,7 +1665,8 @@ input[type=checkbox] {
 .contact-section i:hover {
   transform: scale(1.1);
 }
-.contact-section i:before, .contact-section i:after {
+.contact-section i:before,
+.contact-section i:after {
   width: 40px;
   height: 40px;
   -moz-box-sizing: border-box;
@@ -1699,7 +1754,8 @@ input[type=checkbox] {
   width: 4px;
   height: 4px;
   background: var(--main-color);
-  transition: all cubic-bezier(0.5, 1, 0.89, 1) 0.3s, transform 0.3s cubic-bezier(0.5, 1, 0.89, 1) 0.3s;
+  transition: all cubic-bezier(0.5, 1, 0.89, 1) 0.3s,
+    transform 0.3s cubic-bezier(0.5, 1, 0.89, 1) 0.3s;
   border-radius: 8px;
   position: absolute;
   top: 0;
@@ -1760,7 +1816,8 @@ input[type=checkbox] {
   width: 28px;
 }
 
-.dropdown button, .dropdown-content li {
+.dropdown button,
+.dropdown-content li {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -1870,7 +1927,11 @@ input[type=checkbox] {
   background-color: var(--black-color);
   transition: var(--transition);
   border-right: 5px solid var(--main-color);
-  filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.2), 4px 4px 5px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(
+    2px 2px 10px rgba(0, 0, 0, 0.3),
+    3px 3px 5px rgba(0, 0, 0, 0.2),
+    4px 4px 5px rgba(0, 0, 0, 0.1)
+  );
 }
 
 .sett-con {
@@ -2031,7 +2092,8 @@ h2.heading span {
   margin: 0;
   padding: 0;
 }
-.ring:before, .ring:after {
+.ring:before,
+.ring:after {
   content: "";
   position: absolute;
   top: var(--s);
@@ -2042,8 +2104,10 @@ h2.heading span {
   border: var(--bor) solid #fff;
 }
 .ring:before {
-  box-shadow: 0 0 var(--boxShadow) var(--main-color), inset 0 0 var(--boxShadow) var(--main-color);
-  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333));
+  box-shadow: 0 0 var(--boxShadow) var(--main-color),
+    inset 0 0 var(--boxShadow) var(--main-color);
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333));
   animation: move 10s linear infinite;
   /* Increase duration to reduce load */
 }
@@ -2205,7 +2269,8 @@ h2.heading span {
   padding-bottom: 0px;
   padding-left: 50px;
 }
-.circular_progress .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+.circular_progress
+  .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
   width: 300px;
   padding-top: 0px;
   padding-right: 15px;
@@ -2218,12 +2283,14 @@ h2.heading span {
 }
 
 @media (max-width: 1024px) {
-  .circular_progress .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+  .circular_progress
+    .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
     width: 310px;
   }
 }
 @media (max-width: 768px) {
-  .circular_progress .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+  .circular_progress
+    .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
     width: 300px;
   }
   .circular_progress .text-blk.section-headtext {
@@ -2247,7 +2314,8 @@ h2.heading span {
     padding-bottom: 0px;
     padding-left: 20px;
   }
-  .circular_progress .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
+  .circular_progress
+    .responsive-cell-block.wk-desk-3.wk-ipadp-3.wk-tab-6.wk-mobile-12 {
     width: 100%;
   }
   .circular_progress .text-blk.section-headtext {
@@ -2275,7 +2343,8 @@ h2.heading span {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-*:before, *:after {
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2462,7 +2531,8 @@ body {
   border: 2px solid var(--main-color);
   box-shadow: 0 0 25px transparent;
 }
-.btn-group a:not(:first-child):hover, .btn-group .special-btn:hover {
+.btn-group a:not(:first-child):hover,
+.btn-group .special-btn:hover {
   box-shadow: 0 0 25px var(--main-color);
   background-color: var(--main-color);
   color: var(--black-color);
@@ -2605,7 +2675,8 @@ body {
   .timeline .timeline-items:last-child {
     margin-bottom: 0;
   }
-  .timeline .timeline-items:nth-child(odd), .timeline .timeline-items:nth-child(even) {
+  .timeline .timeline-items:nth-child(odd),
+  .timeline .timeline-items:nth-child(even) {
     padding-left: 10%;
     padding-right: 0;
   }
@@ -2696,6 +2767,9 @@ body {
     position: relative;
     transform: translateY(-22%);
   }
+  .about .about-me .about-img.ar img {
+    left: 0%;
+  }
   .about .about-me .about-content {
     margin-top: 15%;
     width: 85%;
@@ -2728,6 +2802,9 @@ body {
   }
   .about .about-me .about-me {
     top: 150%;
+  }
+  .about .about-me .about-me .ar img {
+    left: 20%;
   }
   .about .about-me .about-me .about-img {
     width: 80%;
@@ -2956,7 +3033,8 @@ body {
     align-items: center;
     gap: 1rem;
   }
-  .contact form .input-group, .contact form .input-group-2 {
+  .contact form .input-group,
+  .contact form .input-group-2 {
     width: 70%;
   }
   .contact form .input-box input {
@@ -2995,13 +3073,15 @@ body {
     margin-top: 2rem;
     width: 100%;
   }
-  .contact form input::placeholder, .contact form textarea::placeholder {
+  .contact form input::placeholder,
+  .contact form textarea::placeholder {
     color: var(--main-color);
     /* Replace with your desired color */
     opacity: 1;
     /* Ensure the color is fully visible; default is usually lower */
   }
-  .contact form input:focus, .contact form textarea:focus {
+  .contact form input:focus,
+  .contact form textarea:focus {
     outline: none;
   }
 }
@@ -3011,7 +3091,8 @@ body {
   .contact .field .error-txt {
     font-size: 10px;
   }
-  .contact .input-group, .contact .input-group-2 {
+  .contact .input-group,
+  .contact .input-group-2 {
     width: 70%;
   }
   .contact form {
